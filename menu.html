@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tortas Jerry Tampico - Menú</title>
+    <link rel="stylesheet" href="menu_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Nunito+Sans:wght@700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html"><img src="img/logotortasjerry.png" alt="Logo Tortas Jerry" class="logo"></a>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="menu.html" class="active">Menú</a></li>
+                <li><a href="sucursales.html">Sucursales</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="menu-page-content">
+        <section class="menu-categories">
+            <button class="category-btn active" data-category="all">TODO</button>
+            <button class="category-btn" data-category="tortas">TORTAS</button>
+            <button class="category-btn" data-category="combos">COMBOS</button>
+            <button class="category-btn" data-category="tacos">TACOS</button>
+            <button class="category-btn" data-category="bebidas">BEBIDAS</button>
+            </section>
+
+        <section id="tortas-menu" class="menu-section active-category" data-category="tortas">
+            <h2 class="section-title">TORTAS <span class="subtitle">ESPECIALIDAD DE LA CASA DESDE 1999</span></h2>
+            <div class="product-grid">
+                <div class="product-item" data-name="Torta Bacon" data-description="Deliciosa torta con crujiente tocino ahumado, queso, aguacate y aderezo especial." data-image="img/tortas/torta_bacon.jpg">
+                    <img src="img/tortas/torta_bacon.jpg" alt="Torta Bacon">
+                    <div class="product-info">
+                        <h3>BACON</h3>
+                        <p class="price">$XX.XX C/U</p>
+                    </div>
+                </div>
+                <div class="product-item" data-name="Torta Bistek" data-description="Torta de bistek a la plancha con queso, aguacate y frijoles refritos." data-image="img/tortas/torta_bistek.jpg">
+                    <img src="img/tortas/torta_bistek.jpg" alt="Torta Bistek">
+                    <div class="product-info">
+                        <h3>BISTEK</h3>
+                        <p class="price">$XX.XX C/U</p>
+                    </div>
+                </div>
+                 <div class="product-item" data-name="Torta Guisado" data-description="Torta con guisado casero del día, frijoles y aguacate." data-image="img/tortas/torta_guisado.jpg">
+                    <img src="img/tortas/torta_guisado.jpg" alt="Torta Guisado">
+                    <div class="product-info">
+                        <h3>GUISADO PIT</h3>
+                        <p class="price">$XX.XX C/U</p>
+                    </div>
+                </div>
+                 <div class="product-item" data-name="Torta Cochinita Pibil" data-description="Auténtica cochinita pibil, cebolla morada encurtida y salsa de habanero." data-image="img/tortas/torta_cochinita.jpg">
+                    <img src="img/tortas/torta_cochinita.jpg" alt="Torta Cochinita Pibil">
+                    <div class="product-info">
+                        <h3>COCHINITA PIBIL</h3>
+                        <p class="price">$XX.XX C/U</p>
+                    </div>
+                </div>
+                <div class="product-item" data-name="Torta Huevo Con Chorizo" data-description="Huevo revuelto con chorizo, frijoles y aguacate." data-image="img/tortas/torta_huevo_chorizo.jpg">
+                    <img src="img/tortas/torta_huevo_chorizo.jpg" alt="Torta Huevo Con Chorizo">
+                    <div class="product-info">
+                        <h3>HUEVO CON CHORIZO</h3>
+                        <p class="price">$XX.XX C/U</p>
+                    </div>
+                </div>
+                 <div class="product-item" data-name="Torta Milanesa" data-description="Crujiente milanesa de res empanizada, frijoles, queso y aguacate." data-image="img/tortas/torta_milanesa.jpg">
+                    <img src="img/tortas/torta_milanesa.jpg" alt="Torta Milanesa">
+                    <div class="product-info">
+                        <h3>MILANESA</h3>
+                        <p class="price">$XX.XX C/U</p>
+                    </div>
+                </div>
+                <div class="product-item" data-name="Torta Atun" data-description="Torta fresca de atún, lechuga, tomate y mayonesa." data-image="img/tortas/torta_atun.jpg">
+                    <img src="img/tortas/torta_atun.jpg" alt="Torta Atún">
+                    <div class="product-info">
+                        <h3>ATÚN</h3>
+                        <p class="price">$XX.XX C/U</p>
+                    </div>
+                </div>
+                <div class="product-item" data-name="Torta Pechuga de Pollo" data-description="Pechuga de pollo a la plancha, lechuga, tomate y aderezo." data-image="img/tortas/torta_pechuga_pollo.jpg">
+                    <img src="img/tortas/torta_pechuga_pollo.jpg" alt="Torta Pechuga de Pollo">
+                    <div class="product-info">
+                        <h3>PECHUGA DE POLLO</h3>
+                        <p class="price">$XX.XX C/U</p>
+                    </div>
+                </div>
+                <div class="product-item" data-name="Torta Pierna" data-description="Tierna pierna de puerco horneada, con aguacate y frijoles." data-image="img/tortas/torta_pierna.jpg">
+                    <img src="img/tortas/torta_pierna.jpg" alt="Torta Pierna">
+                    <div class="product-info">
+                        <h3>PIERNA</h3>
+                        <p class="price">$XX.XX C/U</p>
+                    </div>
+                </div>
+                <div class="product-item" data-name="Torta Jerry Burger" data-description="La clásica hamburguesa de la casa en pan de torta." data-image="img/tortas/torta_jerryburger.jpg">
+                    <img src="img/tortas/torta_jerryburger.jpg" alt="Torta Jerry Burger">
+                    <div class="product-info">
+                        <h3>JERRY BURGER</h3>
+                        <p class="price">$XX.XX C/U</p>
+                    </div>
+                </div>
+                <div class="product-item" data-name="Torta Vegetariana" data-description="Torta con panela asada, aguacate, tomate y pepino." data-image="img/tortas/torta_vegetariana.jpg">
+                    <img src="img/tortas/torta_vegetariana.jpg" alt="Torta Vegetariana">
+                    <div class="product-info">
+                        <h3>VEGETARIANA</h3>
+                        <p class="price">$XX.XX C/U</p>
+                    </div>
+                </div>
+                <div class="product-item" data-name="Torta JerryFit" data-description="Torta ligera con panela, aguacate, lechuga y aderezo light." data-image="img/tortas/torta_jerryfit.jpg">
+                    <img src="img/tortas/torta_jerryfit.jpg" alt="Torta JerryFit">
+                    <div class="product-info">
+                        <h3>JERRY FIT</h3>
+                        <p class="price">$XX.XX C/U</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="combos-menu" class="menu-section" data-category="combos">
+            <h2 class="section-title">COMBO <span class="subtitle">INCLUYE TORTA, PAPAS Y REFRESCO CHICO</span></h2>
+            <div class="product-grid">
+                <div class="product-item" data-name="Combo Guisado Pit" data-description="Torta Guisado Pit, papas y refresco chico." data-image="img/combos/combo_guisado.jpg">
+                    <img src="img/combos/combo_guisado.jpg" alt="Combo Guisado Pit">
+                    <div class="product-info">
+                        <h3>COMBO GUISADO PIT</h3>
+                        <p class="price">$XX.XX C/U</p>
+                    </div>
+                </div>
+                <div class="product-item" data-name="Combo Pechuga de Pollo" data-description="Torta Pechuga de Pollo, papas y refresco chico." data-image="img/combos/combo_pechuga.jpg">
+                    <img src="img/combos/combo_pechuga.jpg" alt="Combo Pechuga de Pollo">
+                    <div class="product-info">
+                        <h3>COMBO PECHUGA DE POLLO</h3>
+                        <p class="price">$XX.XX C/U</p>
+                    </div>
+                </div>
+            </div>
+             <h2 class="section-title" style="margin-top: 50px;">COMBO <span class="subtitle">INCLUYE TORTA, PAPAS Y REFRESCO CHICO</span></h2>
+              <div class="product-grid">
+                <div class="product-item" data-name="Combo de la Casa" data-description="Torta a elegir, papas y refresco chico. ¡Elige tu favorita!" data-image="img/combos/combo_casa.jpg">
+                    <img src="img/combos/combo_casa.jpg" alt="Combo de la Casa">
+                    <div class="product-info">
+                        <h3>COMBO DE LA CASA</h3>
+                        <p class="price">$XX.XX C/U</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tacos-menu" class="menu-section" data-category="tacos">
+            <h2 class="section-title">TACOS <span class="subtitle">ORDEN DE 3 TACOS</span></h2>
+            <div class="product-grid">
+                 <div class="product-item" data-name="Taco Bistek" data-description="3 tacos de bistek con cebolla y cilantro." data-image="img/tacos/taco_bistek.jpg">
+                    <img src="img/tacos/taco_bistek.jpg" alt="Taco Bistek">
+                    <div class="product-info">
+                        <h3>BISTEK</h3>
+                        <p class="price">$XX.XX C/U</p>
+                    </div>
+                </div>
+                 <div class="product-item" data-name="Taco Chicharrón de Cachete" data-description="3 tacos de chicharrón de cachete con salsa roja." data-image="img/tacos/taco_chicharron.jpg">
+                    <img src="img/tacos/taco_chicharron.jpg" alt="Taco Chicharrón de Cachete">
+                    <div class="product-info">
+                        <h3>CHICHARRÓN DE CACHETE</h3>
+                        <p class="price">$XX.XX C/U</p>
+                    </div>
+                </div>
+                 <div class="product-item" data-name="Taco Cochinita Pibil" data-description="3 tacos de cochinita pibil con cebolla morada." data-image="img/tacos/taco_cochinita.jpg">
+                    <img src="img/tacos/taco_cochinita.jpg" alt="Taco Cochinita Pibil">
+                    <div class="product-info">
+                        <h3>COCHINITA PIBIL</h3>
+                        <p class="price">$XX.XX C/U</p>
+                    </div>
+                </div>
+                 <div class="product-item" data-name="Taco Frijol Con Queso" data-description="3 tacos de frijoles refritos con queso fundido." data-image="img/tacos/taco_frijol_queso.jpg">
+                    <img src="img/tacos/taco_frijol_queso.jpg" alt="Taco Frijol Con Queso">
+                    <div class="product-info">
+                        <h3>FRIJOL CON QUESO</h3>
+                        <p class="price">$XX.XX C/U</p>
+                    </div>
+                </div>
+                 <div class="product-item" data-name="Taco Huevo Con Chorizo" data-description="3 tacos de huevo con chorizo y frijoles." data-image="img/tacos/taco_huevo_chorizo.jpg">
+                    <img src="img/tacos/taco_huevo_chorizo.jpg" alt="Taco Huevo Con Chorizo">
+                    <div class="product-info">
+                        <h3>HUEVO CON CHORIZO</h3>
+                        <p class="price">$XX.XX C/U</p>
+                    </div>
+                </div>
+                 <div class="product-item" data-name="Taco Huevo Con Jamon" data-description="3 tacos de huevo con jamón." data-image="img/tacos/taco_huevo_jamon.jpg">
+                    <img src="img/tacos/taco_huevo_jamon.jpg" alt="Taco Huevo Con Jamón">
+                    <div class="product-info">
+                        <h3>HUEVO CON JAMÓN</h3>
+                        <p class="price">$XX.XX C/U</p>
+                    </div>
+                </div>
+                 <div class="product-item" data-name="Taco Huevo Rojo" data-description="3 tacos de huevo revuelto en salsa roja." data-image="img/tacos/taco_huevo_rojo.jpg">
+                    <img src="img/tacos/taco_huevo_rojo.jpg" alt="Taco Huevo Rojo">
+                    <div class="product-info">
+                        <h3>HUEVO ROJO</h3>
+                        <p class="price">$XX.XX C/U</p>
+                    </div>
+                </div>
+                 <div class="product-item" data-name="Taco Huevo Verde" data-description="3 tacos de huevo revuelto en salsa verde." data-image="img/tacos/taco_huevo_verde.jpg">
+                    <img src="img/tacos/taco_huevo_verde.jpg" alt="Taco Huevo Verde">
+                    <div class="product-info">
+                        <h3>HUEVO VERDE</h3>
+                        <p class="price">$XX.XX C/U</p>
+                    </div>
+                </div>
+                 <div class="product-item" data-name="Taco Milanesa" data-description="3 tacos de crujiente milanesa empanizada." data-image="img/tacos/taco_milanesa.jpg">
+                    <img src="img/tacos/taco_milanesa.jpg" alt="Taco Milanesa">
+                    <div class="product-info">
+                        <h3>MILANESA</h3>
+                        <p class="price">$XX.XX C/U</p>
+                    </div>
+                </div>
+                 <div class="product-item" data-name="Taco Papa Con Chorizo" data-description="3 tacos de papa con chorizo." data-image="img/tacos/taco_papa_chorizo.jpg">
+                    <img src="img/tacos/taco_papa_chorizo.jpg" alt="Taco Papa Con Chorizo">
+                    <div class="product-info">
+                        <h3>PAPA CON CHORIZO</h3>
+                        <p class="price">$XX.XX C/U</p>
+                    </div>
+                </div>
+                 <div class="product-item" data-name="Taco Frijol" data-description="3 tacos de frijoles refritos." data-image="img/tacos/taco_frijol.jpg">
+                    <img src="img/tacos/taco_frijol.jpg" alt="Taco Frijol">
+                    <div class="product-info">
+                        <h3>FRIJOL</h3>
+                        <p class="price">$XX.XX C/U</p>
+                    </div>
+                </div>
+                 <div class="product-item" data-name="Taco Chicharron Guisado" data-description="3 tacos de chicharrón en salsa verde o roja." data-image="img/tacos/taco_chicharron_guisado.jpg">
+                    <img src="img/tacos/taco_chicharron_guisado.jpg" alt="Taco Chicharrón Guisado">
+                    <div class="product-info">
+                        <h3>CHICHARRÓN GUISADO</h3>
+                        <p class="price">$XX.XX C/U</p>
+                    </div>
+                </div>
+                 <div class="product-item" data-name="Taco Quesadilla" data-description="Quesadilla de tortilla de maíz con queso fundido." data-image="img/tacos/taco_quesadilla.jpg">
+                    <img src="img/tacos/taco_quesadilla.jpg" alt="Taco Quesadilla">
+                    <div class="product-info">
+                        <h3>QUESADILLA</h3>
+                        <p class="price">$XX.XX C/U</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="bebidas-menu" class="menu-section" data-category="bebidas">
+            <h2 class="section-title">BEBIDAS</h2>
+             <div class="drinks-grid">
+                <div class="drink-item">
+                    <img src="img/bebidas/agua_horchata.jpg" alt="Agua de Horchata">
+                    <p>AGUA DE HORCHATA</p>
+                    <p class="drink-price">$XX.XX</p>
+                </div>
+                 <div class="drink-item">
+                    <img src="img/bebidas/agua_jamaica.jpg" alt="Agua de Jamaica">
+                    <p>AGUA DE JAMAICA</p>
+                    <p class="drink-price">$XX.XX</p>
+                </div>
+                <div class="drink-item">
+                    <img src="img/bebidas/cafe.jpg" alt="Café">
+                    <p>CAFÉ</p>
+                    <p class="drink-price">$XX.XX</p>
+                </div>
+            </div>
+
+            <h2 class="section-title" style="margin-top: 50px;">REFRESCOS</h2>
+            <div class="soda-carousel-container">
+                <button class="soda-arrow prev-soda">&#10094;</button>
+                <div class="soda-carousel">
+                    <div class="soda-slide active">
+                        <img src="img/bebidas/refresco_coca.jpg" alt="Coca-Cola">
+                        <p>COCA-COLA</p>
+                        <p class="soda-price">$XX.XX</p>
+                    </div>
+                    <div class="soda-slide">
+                        <img src="img/bebidas/refresco_sprite.jpg" alt="Sprite">
+                        <p>SPRITE</p>
+                        <p class="soda-price">$XX.XX</p>
+                    </div>
+                    <div class="soda-slide">
+                        <img src="img/bebidas/refresco_fanta.jpg" alt="Fanta">
+                        <p>FANTA</p>
+                        <p class="soda-price">$XX.XX</p>
+                    </div>
+                     <div class="soda-slide">
+                        <img src="img/bebidas/refresco_pepsi.jpg" alt="Pepsi">
+                        <p>PEPSI</p>
+                        <p class="soda-price">$XX.XX</p>
+                    </div>
+                </div>
+                <button class="soda-arrow next-soda">&#10095;</button>
+            </div>
+        </section>
+    </main>
+
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <img id="modal-image" src="" alt="Producto en detalle">
+            <h3 id="modal-name"></h3>
+            <p id="modal-description"></p>
+        </div>
+    </div>
+
+    <footer>
+    <div class="container">
+        <div class="footer-content">
+
+            <div class="footer-column footer-brand">
+                <img src="img/logotortasjerry.png" alt="Logo Tortas Jerry" class="footer-logo">
+                <p class="copyright">&copy; 2025 Tortas Jerry</p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Navegación</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="menu.html">Menú</a></li>
+                    <li><a href="sucursales.html">Sucursales</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Sugerencias</h4>
+                <ul class="footer-links-with-icons">
+                    <li>
+                        <a href="#">
+                            <img src="img/iconosfooter/Recurso8emailfondoblanco.png" alt="Email">
+                            <span>Correo Electrónico</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/iconosfooter/Recurso7whatsfondoblanco.png" alt="Mensaje de Texto">
+                            <span>Mensaje de Texto</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Redes Sociales</h4>
+                <ul class="footer-links-with-icons">
+                    <li>
+                        <a href="#" target="_blank">
+                            <img src="img/iconosfooter/Recurso5facefondoblanco.png" alt="Facebook">
+                            <span>Facebook</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <img src="img/iconosfooter/Recurso6instafondoblanco.png" alt="Instagram">
+                            <span>Instagram</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Horarios de Atención</h4>
+                <div class="footer-info-item">
+                    <img src="img/iconosfooter/Recurso 20horariofondoblanco.png" alt="Horario">
+                    <span>8:00am - 9:00pm<br>De Lunes a Domingo</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+    <script src="menu_script.js"></script>
+</body>
+</html>
