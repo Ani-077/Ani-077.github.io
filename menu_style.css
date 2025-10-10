@@ -118,226 +118,403 @@ nav ul li a:hover, nav ul li a.active {
     padding-top: 100px; /* Ajusta según la altura de tu header */
 }
 
-/* ----- CATEGORÍAS DEL MENÚ (Botones debajo del header) ----- */
+/*
+==============================================
+ESTILOS PARA LOS BOTONES DE CATEGORÍA DEL MENÚ (NUEVO)
+==============================================
+*/
+
 .menu-categories {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Para que los botones se envuelvan en pantallas pequeñas */
+    flex-wrap: wrap;
     gap: 15px;
-    background-color: var(--negro-fondo); /* Fondo oscuro para los botones */
-    padding: 20px 10px;
-    margin-bottom: 30px;
+    padding: 40px 10px;
+    /* Eliminamos el fondo negro para que sea el fondo general de la página */
 }
 
 .category-btn {
-    background-color: transparent;
-    color: var(--blanco-texto);
-    border: 2px solid var(--blanco-texto);
-    padding: 10px 25px;
-    border-radius: 5px;
+    background-color: var(--rojo-principal); /* Fondo rojo por defecto */
+    color: white;
+    border: 2px solid var(--rojo-principal);
+    padding: 12px 30px; /* Ajusta el tamaño */
+    border-radius: 50px; /* <-- Esto los hace redondeados */
     font-family: 'Nunito Sans', sans-serif;
     font-weight: bold;
     text-transform: uppercase;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-size: 1rem;
+    font-size: 20px;
 }
 
 .category-btn:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: #C10426; /* Un rojo un poco más oscuro al pasar el mouse */
+    border-color: #C10426;
 }
 
 .category-btn.active {
-    background-color: var(--rojo-principal);
+    background-color: var(--blanco-texto); /* Fondo rosa pálido cuando está activo */
+    color: var(--rojo-principal); /* Texto rojo cuando está activo */
     border-color: var(--rojo-principal);
-    color: var(--blanco-texto);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
-/* ----- SECCIONES DE PRODUCTOS (Tortas, Tacos, Combos, etc.) ----- */
-.menu-section {
-    padding: 40px 20px;
-    display: none; /* Por defecto, todas las secciones están ocultas */
-    animation: fadeIn 0.5s forwards; /* Animación al aparecer */
+/* Espacio para que los títulos no queden debajo del header al navegar a ellos */
+#tortas-menu,
+#combos-menu,
+#tacos-menu,
+#bebidas-menu {
+    scroll-margin-top: 100px; /* Ajusta este valor a la altura de tu header */
 }
 
-.menu-section.active-category {
-    display: block; /* Solo la categoría activa se muestra */
+/*
+==============================================
+ESTILOS PARA TÍTULOS Y PRODUCTOS DEL MENÚ (NUEVO)
+==============================================
+*/
+
+/* REEMPLAZA LAS REGLAS ANTERIORES DEL TÍTULO CON ESTAS */
+
+/* Regla para el fondo café (ancho completo) */
+.menu-title-wrapper {
+    background-color: #AD8A67;
+    padding: 20px 0;
+    margin-bottom: 25px;
 }
 
-/* Efecto de franjas de fondo para las secciones (como en la imagen) */
-#tortas-menu { background-color: var(--gris-claro); }
-#combos-menu { background-color: var(--beige-fondo); }
-#tacos-menu { background-color: var(--gris-claro); }
-#bebidas-menu { background-color: var(--beige-fondo); }
-
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+/* Regla para el contenido del título (el que va dentro del .container) */
+.menu-title-content {
+    display: flex;
+    justify-content: center; /* <-- CÁMBIALO A 'center' */
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px; /* <-- AÑADE UN ESPACIO entre los dos bloques de texto */
 }
 
-.section-title {
+/* Columna izquierda del título (ej. "TORTAS") */
+.title-main {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: white; /* <-- APLICAMOS EL COLOR DIRECTAMENTE AQUÍ */
+}
+
+/* Columna derecha del título (precios) */
+.title-pricing {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    text-align: left;
+    color: white; /* <-- Y AQUÍ TAMBIÉN PARA ASEGURARLO */
+}
+.title-pricing span {
+    display: block;
+}
+.title-pricing strong {
+    font-weight: 700;
+}
+
+
+/* Subtítulo debajo de la franja café */
+.menu-subtitle {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: #555;
     margin-bottom: 40px;
-    font-size: 2.5rem;
-    color: var(--negro-fondo); /* Color para títulos de sección */
 }
 
-/* Contenedor de los productos */
+
+/* Rejilla que contiene los productos */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 3 columnas en pantallas grandes */
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
+    /* 2 columnas en desktop, 1 en móvil */
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 15px;
 }
 
+
+/* Estilo para cada tarjeta de producto */
 .product-item {
-    background-color: var(--blanco-texto);
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    background-color: white;
+    border: 2px solid #FAD6D6; /* Borde rojo pálido */
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(217, 4, 41, 0.15); /* Sombra roja sutil */
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px;
 }
 
 .product-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 25px rgba(217, 4, 41, 0.25);
 }
 
-.product-item img {
-    width: 100%;
-    height: 180px; /* Altura fija para las imágenes */
-    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
-    display: block;
+/* Contenedor del texto a la izquierda */
+.product-text-content {
+    flex: 1; /* Ocupa el espacio disponible */
 }
 
-.product-info {
-    padding: 15px;
-    text-align: center;
-}
-
-.product-info h3 {
-    margin: 0 0 5px 0;
-    font-size: 1.3rem;
-    color: var(--negro-fondo);
-}
-
-.product-info .price {
+.product-text-content h3 {
     font-family: 'Nunito Sans', sans-serif;
-    font-weight: bold;
     color: var(--rojo-principal);
-    font-size: 1.1rem;
-}
-
-/* ----- SECCIÓN DE BEBIDAS ----- */
-.drinks-grid {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-bottom: 50px;
-}
-
-.drink-item {
-    text-align: center;
-    background-color: var(--blanco-texto);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    width: 180px; /* Ancho fijo para las bebidas individuales */
-}
-
-.drink-item img {
-    max-width: 100px;
-    height: 120px;
-    object-fit: contain; /* Para que la imagen no se recorte */
+    font-size: 1.8rem;
+    margin-top: 0;
     margin-bottom: 10px;
 }
 
-.drink-item p {
-    margin: 5px 0;
-    font-weight: 700;
-    color: var(--negro-fondo);
+.product-text-content p {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
 }
 
-.drink-item .drink-price {
+
+/* Contenedor de la imagen a la derecha */
+.product-image-content {
+    flex-basis: 150px; /* Ancho fijo para la imagen */
+}
+
+.product-image-content img {
+    width: 100%;
+    height: auto;
+}
+
+/* AÑADE ESTA NUEVA REGLA EN menu_style.css */
+
+#tacos-menu .product-text-content h3 {
+    font-size: 1.5rem; /* <-- Cambia al tamaño que quieras para los títulos de tacos */
+    /* Puedes añadir cualquier otra modificación aquí, como el color */
+    /* color: blue; */
+}
+
+/* AÑADE ESTA OTRA REGLA EN menu_style.css */
+
+#tacos-menu .price-inline {
+    font-size: 1.5rem; /* Hereda el tamaño del título pero podemos ajustarlo */
+    font-weight: 700;
     color: var(--rojo-principal);
-    font-family: 'Nunito Sans', sans-serif;
+    margin-left: 10px; /* Espacio entre el nombre y el precio */
+}
+
+/*
+==============================================
+ESTILOS ESPECÍFICOS PARA LA TARJETA DE COMBO
+==============================================
+*/
+
+.combo-item {
+    flex-direction: column; /* Apila el contenido verticalmente */
+    text-align: center; /* Centra todo el texto */
+    margin-bottom: 30px;
+    width: 600px;
+    align-items: center;
+
+}
+
+.combo-item .product-text-content {
+    margin-bottom: 20px; /* Espacio entre el texto y la imagen */
+}
+
+.combo-item .product-image-content {
+    flex-basis: auto; /* Reseteamos el ancho fijo */
+    width: 80%; /* La imagen ocupará el 80% del ancho de la tarjeta */
+    margin: 0 auto; /* Centra el contenedor de la imagen */
+}
+
+#combos-menu .product-grid {
+    display: flex;           /* Usamos Flexbox para esta sección */
+    justify-content: center; /* Centra el item horizontalmente */
+}
+
+/*
+==============================================
+ESTILOS ESPECÍFICOS PARA LAS TARJETAS DE BEBIDAS
+==============================================
+*/
+
+.drink-item {
+    flex-direction: column; /* Apila el contenido verticalmente */
+    text-align: center;
+    justify-content: space-between; /* Distribuye el espacio verticalmente */
+}
+
+.drink-item .product-text-content {
+    order: 1; /* Orden del título */
+}
+
+.drink-item .product-image-content {
+    order: 2; /* Orden de la imagen */
+    width: 60%;
+    margin: 20px auto;
+}
+
+.drink-item .product-pricing-content {
+    order: 3; /* Orden de los precios */
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    line-height: 1.5;
+}
+
+.drink-item .product-pricing-content p {
+    margin: 2px 0; /* Reduce el espacio entre las líneas de precio */
+    font-size: 0.95rem;
+}
+
+.drink-item .product-pricing-content strong {
+    font-weight: 700;
     font-size: 1.1rem;
 }
 
-/* Carrusel de Refrescos */
-.soda-carousel-container {
-    max-width: 900px; /* Ajusta el ancho máximo del carrusel */
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
-    padding: 20px 0;
+/*
+==============================================
+ESTILOS PARA CARRUSELES (REFRESCOS Y SALSAS)
+==============================================
+*/
+
+/* --- Contenedor de fondo rojo (SOLO PARA REFRESCOS) --- */
+.soda-section-wrapper {
+    background-color: var(--rojo-principal);
+    padding: 40px 0;
+    margin-top: 50px;
 }
 
-.soda-carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    justify-content: center; /* Centra los slides */
-}
-
-.soda-slide {
-    flex: 0 0 33.33%; /* Muestra 3 slides a la vez en pantallas grandes */
-    box-sizing: border-box;
+/* --- Título principal de los carruseles ("REFRESCOS $34" o "SALSAS") --- */
+.soda-section-title {
+    font-family: 'Nunito Sans', sans-serif;
+    color: white; /* Color por defecto para fondo rojo */
     text-align: center;
-    padding: 15px;
-    background-color: var(--blanco-texto);
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    margin: 0 10px; /* Espacio entre los slides */
-    display: flex; /* Para centrar contenido */
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+/* --- Contenedores principales (los que recortan la vista y posicionan las flechas) --- */
+.soda-carousel-container,
+.salsas-carousel-container {
+    position: relative;
+    overflow: hidden; /* <-- Oculta los slides que están fuera */
+}
+
+/* --- Contenedores que se deslizan (los que usan Flexbox) --- */
+.soda-carousel,
+.salsas-carousel {
+    display: flex; /* <-- ESTO PONE LOS ELEMENTOS EN HORIZONTAL */
+}
+
+/* --- Tarjeta blanca individual (se reutiliza para ambos carruseles) --- */
+.soda-slide {
+    flex: 0 0 33.33%; /* Muestra 3 slides a la vez en desktop */
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    padding: 20px;
+    margin: 0 15px;
+    text-align: center;
+}
+
+.soda-slide h4 {
+    font-family: 'Nunito Sans', sans-serif;
+    color: var(--rojo-principal);
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
 .soda-slide img {
-    max-width: 80px;
-    height: 100px;
+    max-width: 80%;
+    height: 180px;
     object-fit: contain;
-    margin-bottom: 10px;
 }
 
-.soda-slide p {
-    margin: 5px 0;
-    font-weight: 700;
-    color: var(--negro-fondo);
-}
-.soda-slide .soda-price {
-    color: var(--rojo-principal);
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 1.1rem;
-}
-
+/* --- Flechas (estilo base y posicionamiento) --- */
 .soda-arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white; /* Color por defecto para fondo rojo */
     border: none;
     font-size: 2rem;
-    padding: 10px 15px;
+    font-weight: bold;
     cursor: pointer;
     z-index: 10;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: background-color 0.3s ease;
 }
 
 .soda-arrow:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-.prev-soda { left: 0; }
-.next-soda { right: 0; }
+.prev-soda, .prev-salsa {
+    left: 10px;
+}
 
+.next-soda, .next-salsa {
+    right: 10px;
+}
+
+/* --- Estilos específicos para la sección de SALSAS (fondo blanco) --- */
+#complementos-menu .soda-section-title {
+    color: var(--rojo-principal); /* Cambia el título a rojo */
+}
+
+#complementos-menu .soda-arrow {
+    color: #333; /* Cambia las flechas a un color oscuro */
+    background-color: rgba(0, 0, 0, 0.1); /* Un fondo más sutil */
+}
+
+#complementos-menu .soda-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Espacio inferior para las últimas secciones del menú */
+#bebidas-menu,
+#complementos-menu {
+    margin-bottom: 30px; /* <-- Espacio de separación */
+}
+
+
+/* -- Media Query para ajustar en móviles -- */
+@media (max-width: 768px) {
+    .soda-slide {
+        flex-basis: 80%;
+    }
+}
+
+/*
+==============================================
+ESTILOS PARA MOSTRAR Y OCULTAR SECCIONES DEL MENÚ
+==============================================
+*/
+
+/* 1. Esta regla OCULTA TODAS las secciones por defecto */
+.menu-section {
+    display: none;
+    animation: fadeIn 0.5s forwards;
+}
+
+/* 2. Esta regla MUESTRA ÚNICAMENTE la sección que tiene la clase 'active-category' */
+.menu-section.active-category {
+    display: block;
+}
+
+/* 3. Animación de entrada (ya deberías tenerla, pero verifícala) */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
 /* ----- MODAL (Pop-up de detalle de producto) ----- */
 .modal {
@@ -574,11 +751,7 @@ footer {
     .section-title .subtitle {
         font-size: 0.7em;
     }
-
-    .product-grid {
-        grid-template-columns: 1fr; /* Una sola columna en móviles */
-        gap: 20px;
-    }
+    
     .product-item img {
         height: 150px;
     }

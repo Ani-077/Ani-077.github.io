@@ -299,7 +299,7 @@ nav ul li a:hover, nav ul li a.active {
 #lo-mejor .grid-container {
     display: grid;
     /* 2 columnas en pantallas medianas, 1 en pequeñas, se adapta */
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); 
     gap: 30px; /* Espacio entre los elementos de la cuadrícula */
     margin-bottom: 50px; /* Margen en la parte inferior de la sección */
 }
