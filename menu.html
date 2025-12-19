@@ -1,30 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tortas Jerry Tampico - Menú</title>
-    <link rel="stylesheet" href="menu_style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Nunito+Sans:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
+
 <body>
 
     <header>
-        <nav>
-            <a href="index.html"><img src="img/logotortasjerry.png" alt="Logo Tortas Jerry" class="logo"></a>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="menu.html" class="active">Menú</a></li>
-                <li><a href="sucursales.html">Sucursales</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg fixed-top custom-navbar p-0">
+            <div class="container-xxl">
+                <a class="navbar-brand py-2" href="index.html">
+                    <img src="img/logotortasjerry.png" alt="Logo Tortas Jerry" class="logo-nav">
+                </a>
+                
+                <button class="navbar-toggler custom-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                    <div class="hamburger-lines">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </div>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav align-items-center">
+                        <li class="nav-item h-100">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item h-100">
+                            <a class="nav-link active" href="menu.html">Menú</a>
+                        </li>
+                        <li class="nav-item h-100">
+                            <a class="nav-link" href="sucursales.html">Sucursales</a>
+                        </li>
+                        <li class="nav-item h-100">
+                            <a class="nav-link" href="nosotros.html">Nosotros</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
     <main class="menu-page-content">
+
         <section class="menu-categories">
             <button class="category-btn active" data-category="all">Todo</button>
             <button class="category-btn" data-category="tortas">Tortas</button>
@@ -36,10 +61,9 @@
         </section>
 
         <section id="tortas-menu" class="menu-section active-category" data-category="tortas">
-
             <div class="menu-title-wrapper">
-                <div class="container menu-title-content">
-                <div class="title-main">TORTAS</div>
+                <div class="contenedor-menu menu-title-content">
+                    <div class="title-main">TORTAS</div>
                     <div class="title-pricing">
                         <span>PAN FRANCÉS O MARGARITA <strong>$106</strong></span>
                         <span>PAN MASA MADRE <strong>(+$18)</strong></span>
@@ -47,685 +71,740 @@
                 </div>
             </div>
 
-            <div class="container">
+            <div class="contenedor-menu">
+                <p class="menu-subtitle">Haz clic sobre los recuadros para ver con más detalle</p>
 
-            <p class="menu-subtitle">Haz clic sobre los recuadros para ver con más detalle</p>
-            
-            <div class="product-grid">
+                <div class="row g-4 justify-content-center">
 
-            <div class="product-item" data-name="Torta de Barda" data-description="Frijol, Jamón, Ternera, Chorizo, Queso Fresco, Tomate, Cebolla y Aguacate" 
-            data-image="img/menu/tortas/Torta-Barda-CS.png">
-            <h3>BARDA</h3>
-                <div class="product-details-row">
-                    <p>Frijol, Jamón, Ternera, Chorizo, Queso Fresco, Tomate, Cebolla y Aguacate</p>
-                    <div class="product-image-content">
-                        <img src="img/menu/tortas/Torta-Barda-CS.png" alt="Torta de Barda">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="product-item" data-bs-toggle="modal" data-bs-target="#productModal"
+                            data-name="Torta de Barda"
+                            data-description="Frijol, Jamón, Ternera, Chorizo, Queso Fresco, Tomate, Cebolla y Aguacate"
+                            data-image="img/menu/tortas/Torta-Barda-CS.png">
+                            <h3>BARDA</h3>
+                            <div class="product-details-row">
+                                <p>Frijol, Jamón, Ternera, Chorizo, Queso Fresco, Tomate, Cebolla y Aguacate</p>
+                                <div class="product-image-content">
+                                    <img src="img/menu/tortas/Torta-Barda-CS.png" alt="Torta de Barda">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="product-item" data-name="Torta de Bisteck" data-description="Aderezo Jerry, Bisteck, Pimiento, Cebolla Asada, Queso Oaxaca, Tomate y Aguacate" 
-            data-image="img/menu/tortas/Torta-Bisteck-CS.png">
-                <h3>BISTECK</h3>
-                <div class="product-details-row">    
-                    <p>Aderezo Jerry, Bisteck, Pimiento, Cebolla Asada, Queso Oaxaca, Tomate y Aguacate</p>
-                    <div class="product-image-content">
-                        <img src="img/menu/tortas/Torta-Bisteck-CS.png" alt="Torta de Bisteck">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="product-item" data-bs-toggle="modal" data-bs-target="#productModal"
+                            data-name="Torta de Bisteck"
+                            data-description="Aderezo Jerry, Bisteck, Pimiento, Cebolla Asada, Queso Oaxaca, Tomate y Aguacate"
+                            data-image="img/menu/tortas/Torta-Bisteck-CS.png">
+                            <h3>BISTECK</h3>
+                            <div class="product-details-row">
+                                <p>Aderezo Jerry, Bisteck, Pimiento, Cebolla Asada, Queso Oaxaca, Tomate y Aguacate</p>
+                                <div class="product-image-content">
+                                    <img src="img/menu/tortas/Torta-Bisteck-CS.png" alt="Torta de Bisteck">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="product-item" data-name="Torta de Bisteck Fit" data-description="Aderezo Fit, Bisteck Asado a la Plancha, con Pimiento y Cebolla, Queso Panela Asado, Tomate y Aguacate" 
-            data-image="img/menu/tortas/Torta-Bisteck-Fit-CS.png">
-                <h3>BISTECK FIT</h3>
-                <div class="product-details-row">    
-                    <p>Aderezo Fit, Bisteck Asado a la Plancha, con Pimiento y Cebolla, Queso Panela Asado, Tomate y Aguacate</p>
-                    <div class="product-image-content">
-                        <img src="img/menu/tortas/Torta-Bisteck-Fit-CS.png" alt="Torta de Bisteck Fit">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="product-item" data-bs-toggle="modal" data-bs-target="#productModal"
+                            data-name="Torta de Bisteck Fit"
+                            data-description="Aderezo Fit, Bisteck Asado a la Plancha, con Pimiento y Cebolla, Queso Panela Asado, Tomate y Aguacate"
+                            data-image="img/menu/tortas/Torta-Bisteck-Fit-CS.png">
+                            <h3>BISTECK FIT</h3>
+                            <div class="product-details-row">
+                                <p>Aderezo Fit, Bisteck Asado a la Plancha, con Pimiento y Cebolla, Queso Panela Asado, Tomate y Aguacate</p>
+                                <div class="product-image-content">
+                                    <img src="img/menu/tortas/Torta-Bisteck-Fit-CS.png" alt="Torta de Bisteck Fit">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="product-item" data-name="Torta de Cochinita Pibil" data-description="Aderezo Jerry, Cochinita Pibil, Tomate, Cebolla y Aguacate" 
-            data-image="img/menu/tortas/Torta-Cochinita-CS.png">
-                <h3>COCHINITA PIBIL</h3>
-                <div class="product-details-row">    
-                    <p>Aderezo Jerry, Cochinita Pibil, Tomate, Cebolla y Aguacate</p>
-                    <div class="product-image-content">
-                        <img src="img/menu/tortas/Torta-Cochinita-CS.png" alt="Torta de Cochinita Pibil">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="product-item" data-bs-toggle="modal" data-bs-target="#productModal"
+                            data-name="Torta de Cochinita Pibil"
+                            data-description="Aderezo Jerry, Cochinita Pibil, Tomate, Cebolla y Aguacate"
+                            data-image="img/menu/tortas/Torta-Cochinita-CS.png">
+                            <h3>COCHINITA PIBIL</h3>
+                            <div class="product-details-row">
+                                <p>Aderezo Jerry, Cochinita Pibil, Tomate, Cebolla y Aguacate</p>
+                                <div class="product-image-content">
+                                    <img src="img/menu/tortas/Torta-Cochinita-CS.png" alt="Torta de Cochinita Pibil">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="product-item" data-name="Torta de Huevo Con Ternera" data-description="Frijol, Huevo con Ternera, Queso Fresco, Chorizo, Tomate, Cebolla y Aguacate" 
-            data-image="img/menu/tortas/Torta-Huevo-con-Ternera-CS.png">
-                <h3>HUEVO CON TERNERA</h3>
-                <div class="product-details-row">    
-                    <p>Frijol, Huevo con Ternera, Queso Fresco, Chorizo, Tomate, Cebolla y Aguacate</p>
-                    <div class="product-image-content">
-                        <img src="img/menu/tortas/Torta-Huevo-con-Ternera-CS.png" alt="Torta de Huevo Con Ternera">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="product-item" data-bs-toggle="modal" data-bs-target="#productModal"
+                            data-name="Torta de Huevo Con Ternera"
+                            data-description="Frijol, Huevo con Ternera, Queso Fresco, Chorizo, Tomate, Cebolla y Aguacate"
+                            data-image="img/menu/tortas/Torta-Huevo-con-Ternera-CS.png">
+                            <h3>HUEVO CON TERNERA</h3>
+                            <div class="product-details-row">
+                                <p>Frijol, Huevo con Ternera, Queso Fresco, Chorizo, Tomate, Cebolla y Aguacate</p>
+                                <div class="product-image-content">
+                                    <img src="img/menu/tortas/Torta-Huevo-con-Ternera-CS.png" alt="Torta de Huevo Con Ternera">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="product-item" data-name="Torta de Milanesa" data-description="Aderezo Jerry, Milanesa De Res, Queso Oaxaca, Tomate, Cebolla y Aguacate" 
-            data-image="img/menu/tortas/Torta-Milanesa-CS.png">
-                <h3>MILANESA</h3>
-                <div class="product-details-row">    
-                    <p>Aderezo Jerry, Milanesa De Res, Queso Oaxaca, Tomate, Cebolla y Aguacate</p>
-                    <div class="product-image-content">
-                        <img src="img/menu/tortas/Torta-Milanesa-CS.png" alt="Torta de Milanesa">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="product-item" data-bs-toggle="modal" data-bs-target="#productModal"
+                            data-name="Torta de Milanesa"
+                            data-description="Aderezo Jerry, Milanesa De Res, Queso Oaxaca, Tomate, Cebolla y Aguacate"
+                            data-image="img/menu/tortas/Torta-Milanesa-CS.png">
+                            <h3>MILANESA</h3>
+                            <div class="product-details-row">
+                                <p>Aderezo Jerry, Milanesa De Res, Queso Oaxaca, Tomate, Cebolla y Aguacate</p>
+                                <div class="product-image-content">
+                                    <img src="img/menu/tortas/Torta-Milanesa-CS.png" alt="Torta de Milanesa">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="product-item" data-name="Torta de Mixta" data-description="Aderezo Jerry, Pierna y Ternera, Crema, Chicharrón Dorado, Tomate, Cebolla y Aguacate" 
-            data-image="img/menu/tortas/Torta-Mixta-CS.png">
-                <h3>MIXTA</h3>
-                <div class="product-details-row">    
-                    <p>Aderezo Jerry, Pierna y Ternera, Crema, Chicharrón Dorado, Tomate, Cebolla y Aguacate</p>
-                    <div class="product-image-content">
-                        <img src="img/menu/tortas/Torta-Mixta-CS.png" alt="Torta de Mixta">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="product-item" data-bs-toggle="modal" data-bs-target="#productModal"
+                            data-name="Torta de Mixta"
+                            data-description="Aderezo Jerry, Pierna y Ternera, Crema, Chicharrón Dorado, Tomate, Cebolla y Aguacate"
+                            data-image="img/menu/tortas/Torta-Mixta-CS.png">
+                            <h3>MIXTA</h3>
+                            <div class="product-details-row">
+                                <p>Aderezo Jerry, Pierna y Ternera, Crema, Chicharrón Dorado, Tomate, Cebolla y Aguacate</p>
+                                <div class="product-image-content">
+                                    <img src="img/menu/tortas/Torta-Mixta-CS.png" alt="Torta de Mixta">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="product-item" data-name="Torta de Al Pastor" data-description="Aderezo Jerry, Carne Al Pastor, Queso Oaxaca, Tomate, Cebolla y Aguacate" 
-            data-image="img/menu/tortas/Torta-Trompo-CS.png">
-                <h3>AL PASTOR</h3>
-                <div class="product-details-row">    
-                    <p>Aderezo Jerry, Carne Al Pastor, Queso Oaxaca, Tomate, Cebolla y Aguacate</p>
-                    <div class="product-image-content">
-                        <img src="img/menu/tortas/Torta-Trompo-CS.png" alt="Torta de Al Pastor">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="product-item" data-bs-toggle="modal" data-bs-target="#productModal"
+                            data-name="Torta de Al Pastor"
+                            data-description="Aderezo Jerry, Carne Al Pastor, Queso Oaxaca, Tomate, Cebolla y Aguacate"
+                            data-image="img/menu/tortas/Torta-Trompo-CS.png">
+                            <h3>AL PASTOR</h3>
+                            <div class="product-details-row">
+                                <p>Aderezo Jerry, Carne Al Pastor, Queso Oaxaca, Tomate, Cebolla y Aguacate</p>
+                                <div class="product-image-content">
+                                    <img src="img/menu/tortas/Torta-Trompo-CS.png" alt="Torta de Al Pastor">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="product-item" data-name="Torta de Pechuga de pollo" data-description="Aderezo Jerry, Pechuga De Pollo, Pimiento, Cebolla Asada, Queso Oaxaca, Tomate y Aguacate" 
-            data-image="img/menu/tortas/Torta-Pechuga-Pollo-CS.png">
-                <h3>PECHUGA DE POLLO</h3>
-                <div class="product-details-row">    
-                    <p>Aderezo Jerry, Pechuga De Pollo, Pimiento, Cebolla Asada, Queso Oaxaca, Tomate y Aguacate</p>
-                    <div class="product-image-content">
-                        <img src="img/menu/tortas/Torta-Pechuga-Pollo-CS.png" alt="Torta de Pechuga de pollo">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="product-item" data-bs-toggle="modal" data-bs-target="#productModal"
+                            data-name="Torta de Pechuga de pollo"
+                            data-description="Aderezo Jerry, Pechuga De Pollo, Pimiento, Cebolla Asada, Queso Oaxaca, Tomate y Aguacate"
+                            data-image="img/menu/tortas/Torta-Pechuga-Pollo-CS.png">
+                            <h3>PECHUGA DE POLLO</h3>
+                            <div class="product-details-row">
+                                <p>Aderezo Jerry, Pechuga De Pollo, Pimiento, Cebolla Asada, Queso Oaxaca, Tomate y Aguacate</p>
+                                <div class="product-image-content">
+                                    <img src="img/menu/tortas/Torta-Pechuga-Pollo-CS.png" alt="Torta de Pechuga de pollo">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="product-item" data-name="Torta de Pechuga de pollo fit" data-description="Aderezo Fit, Pechuga de Pollo Asada a la Plancha con Pimiento y Cebolla, Queso Panela Asado, Tomate y Aguacate" 
-            data-image="img/menu/tortas/Torta-Pechuga-Pollo-CS.png">
-                <h3>PECHUGA DE POLLO FIT</h3>
-                <div class="product-details-row">    
-                    <p>Aderezo Fit, Pechuga de Pollo Asada a la Plancha con Pimiento y Cebolla, Queso Panela Asado, Tomate y Aguacate</p>
-                    <div class="product-image-content">
-                        <img src="img/menu/tortas/Torta-Pechuga-Pollo-CS.png" alt="Torta de Pechuga de pollo fit">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="product-item" data-bs-toggle="modal" data-bs-target="#productModal"
+                            data-name="Torta de Pechuga de pollo fit"
+                            data-description="Aderezo Fit, Pechuga de Pollo Asada a la Plancha con Pimiento y Cebolla, Queso Panela Asado, Tomate y Aguacate"
+                            data-image="img/menu/tortas/Torta-Pechuga-Pollo-CS.png">
+                            <h3>PECHUGA DE POLLO FIT</h3>
+                            <div class="product-details-row">
+                                <p>Aderezo Fit, Pechuga de Pollo Asada a la Plancha con Pimiento y Cebolla, Queso Panela Asado, Tomate y Aguacate</p>
+                                <div class="product-image-content">
+                                    <img src="img/menu/tortas/Torta-Pechuga-Pollo-CS.png" alt="Torta de Pechuga de pollo fit">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="product-item" data-name="Torta de Pierna" data-description="Aderezo Jerry, Pierna, Crema, Chicharrón Dorado, Tomate, Cebolla y Aguacate" 
-            data-image="img/menu/tortas/Torta-Pierna-CS.png">
-                <h3>PIERNA</h3>
-                <div class="product-details-row">    
-                    <p>Aderezo Jerry, Pierna, Crema, Chicharrón Dorado, Tomate, Cebolla y Aguacate</p>
-                    <div class="product-image-content">
-                        <img src="img/menu/tortas/Torta-Pierna-CS.png" alt="Torta de Pierna">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="product-item" data-bs-toggle="modal" data-bs-target="#productModal"
+                            data-name="Torta de Pierna"
+                            data-description="Aderezo Jerry, Pierna, Crema, Chicharrón Dorado, Tomate, Cebolla y Aguacate"
+                            data-image="img/menu/tortas/Torta-Pierna-CS.png">
+                            <h3>PIERNA</h3>
+                            <div class="product-details-row">
+                                <p>Aderezo Jerry, Pierna, Crema, Chicharrón Dorado, Tomate, Cebolla y Aguacate</p>
+                                <div class="product-image-content">
+                                    <img src="img/menu/tortas/Torta-Pierna-CS.png" alt="Torta de Pierna">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="product-item" data-name="Torta de Ternera" data-description="Aderezo Jerry, Ternera, Chicharrón Dorado, Tomate, Cebolla y Aguacate" 
-            data-image="img/menu/tortas/Torta-Ternera-CS.png">
-                <h3>TERNERA</h3>
-                <div class="product-details-row">    
-                    <p>Aderezo Jerry, Ternera, Chicharrón Dorado, Tomate, Cebolla y Aguacate</p>
-                    <div class="product-image-content">
-                        <img src="img/menu/tortas/Torta-Ternera-CS.png" alt="Torta de Ternera">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="product-item" data-bs-toggle="modal" data-bs-target="#productModal"
+                            data-name="Torta de Ternera"
+                            data-description="Aderezo Jerry, Ternera, Chicharrón Dorado, Tomate, Cebolla y Aguacate"
+                            data-image="img/menu/tortas/Torta-Ternera-CS.png">
+                            <h3>TERNERA</h3>
+                            <div class="product-details-row">
+                                <p>Aderezo Jerry, Ternera, Chicharrón Dorado, Tomate, Cebolla y Aguacate</p>
+                                <div class="product-image-content">
+                                    <img src="img/menu/tortas/Torta-Ternera-CS.png" alt="Torta de Ternera">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="product-item" data-name="Torta de Vegetariana" data-description="Aderezo Jerry O Frijol, Queso Fresco, Lechuga, Pimiento, Tomate, Cebolla y Aguacate" 
-            data-image="img/menu/tortas/Torta-Vegetariana-CS.png">
-                <h3>VEGETARIANA</h3>
-                <div class="product-details-row">    
-                    <p>Aderezo Jerry O Frijol, Queso Fresco, Lechuga, Pimiento, Tomate, Cebolla y Aguacate</p>
-                    <div class="product-image-content">
-                        <img src="img/menu/tortas/Torta-Vegetariana-CS.png" alt="Torta de Vegetariana">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="product-item" data-bs-toggle="modal" data-bs-target="#productModal"
+                            data-name="Torta de Vegetariana"
+                            data-description="Aderezo Jerry O Frijol, Queso Fresco, Lechuga, Pimiento, Tomate, Cebolla y Aguacate"
+                            data-image="img/menu/tortas/Torta-Vegetariana-CS.png">
+                            <h3>VEGETARIANA</h3>
+                            <div class="product-details-row">
+                                <p>Aderezo Jerry O Frijol, Queso Fresco, Lechuga, Pimiento, Tomate, Cebolla y Aguacate</p>
+                                <div class="product-image-content">
+                                    <img src="img/menu/tortas/Torta-Vegetariana-CS.png" alt="Torta de Vegetariana">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="product-item" data-name="JerryBurger" data-description="Aderezo Jerry, Carne de Sirloin, Queso Amarillo, Ensalada de Col, Tomate y Cebolla" 
-            data-image="img/menu/tortas/Torta-Bisteck-CS.png">
-                <h3>JERRYBURGER</h3>
-                <div class="product-details-row">    
-                    <p>Aderezo Jerry, Carne de Sirloin, Queso Amarillo, Ensalada de Col, Tomate y Cebolla</p>
-                    <div class="product-image-content">
-                        <img src="img/menu/tortas/Torta-Bisteck-CS.png" alt="JerryBurger">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="product-item" data-bs-toggle="modal" data-bs-target="#productModal"
+                            data-name="JerryBurger"
+                            data-description="Aderezo Jerry, Carne de Sirloin, Queso Amarillo, Ensalada de Col, Tomate y Cebolla"
+                            data-image="img/menu/tortas/Torta-Bisteck-CS.png">
+                            <h3>JERRYBURGER</h3>
+                            <div class="product-details-row">
+                                <p>Aderezo Jerry, Carne de Sirloin, Queso Amarillo, Ensalada de Col, Tomate y Cebolla</p>
+                                <div class="product-image-content">
+                                    <img src="img/menu/tortas/Torta-Bisteck-CS.png" alt="JerryBurger">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        
+
                 </div>
             </div>
         </section>
 
-        <section id="jerryfit-menu" class="menu-section" data-category="jerryfit">
-    
-    <div class="menu-title-wrapper">
-        <div class="container menu-title-content">
-            <div class="title-main">JERRYFIT</div>
-            <div class="title-pricing">
-                <span>PAN FRANCÉS O MARGARITA <strong>$106</strong></span>
-                <span>PAN MASA MADRE <strong>(+$18)</strong></span>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <p class="menu-subtitle">Haz clic sobre los recuadros para ver con más detalle</p>
-
-        <div class="product-grid">
-
-            <div class="product-item" 
-                 data-name="Bisteck Fit" 
-                 data-description="Aderezo Fit, Bisteck Asado a la Plancha, con Pimiento y Cebolla, Queso Panela Asado, Tomate y Aguacate" 
-                 data-image="img/menu/tortas/Torta-Bisteck-Fit-CS.png">
-                <h3>BISTECK FIT</h3>
-                <div class="product-details-row"> 
-                    <p>Aderezo Fit, Bisteck Asado a la Plancha, con Pimiento y Cebolla, Queso Panela Asado, Tomate y Aguacate</p>
-                <div class="product-image-content">
-                    <img src="img/menu/tortas/Torta-Bisteck-Fit-CS.png" alt="Bisteck Fit">
-                </div>
+        <section id="jerryfit-menu" class="menu-section active-category" data-category="jerryfit">
+            <div class="menu-title-wrapper">
+                <div class="contenedor-menu menu-title-content">
+                    <div class="title-main">JERRYFIT</div>
+                    <div class="title-pricing">
+                        <span>PAN FRANCÉS O MARGARITA <strong>$106</strong></span>
+                        <span>PAN MASA MADRE <strong>(+$18)</strong></span>
+                    </div>
                 </div>
             </div>
 
-            <div class="product-item" 
-                 data-name="Pechuga de Pollo Fit" 
-                 data-description="Aderezo Fit, Pechuga de Pollo Asada a la Plancha con Pimiento y Cebolla, Queso Panela Asado, Tomate y Aguacate" 
-                 data-image="img/menu/tortas/Torta-Pechuga-Pollo-CS.png">
-                <h3>PECHUGA DE POLLO FIT</h3>
-                <div class="product-details-row">    
-                    <p>Aderezo Fit, Pechuga de Pollo Asada a la Plancha con Pimiento y Cebolla, Queso Panela Asado, Tomate y Aguacate</p>
-                <div class="product-image-content">
-                    <img src="img/menu/tortas/Torta-Pechuga-Pollo-CS.png" alt="Pechuga de Pollo Fit">
+            <div class="contenedor-menu">
+                <div class="row g-4 justify-content-center">
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="product-item" data-bs-toggle="modal" data-bs-target="#productModal"
+                            data-name="Bisteck Fit"
+                            data-description="Aderezo Fit, Bisteck Asado a la Plancha, con Pimiento y Cebolla, Queso Panela Asado, Tomate y Aguacate"
+                            data-image="img/menu/tortas/Torta-Bisteck-Fit-CS.png">
+                            <h3>BISTECK FIT</h3>
+                            <div class="product-details-row">
+                                <p>Aderezo Fit, Bisteck Asado a la Plancha, con Pimiento y Cebolla, Queso Panela Asado, Tomate y Aguacate</p>
+                                <div class="product-image-content">
+                                    <img src="img/menu/tortas/Torta-Bisteck-Fit-CS.png" alt="Bisteck Fit">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="product-item" data-bs-toggle="modal" data-bs-target="#productModal"
+                            data-name="Pechuga de Pollo Fit"
+                            data-description="Aderezo Fit, Pechuga de Pollo Asada a la Plancha con Pimiento y Cebolla, Queso Panela Asado, Tomate y Aguacate"
+                            data-image="img/menu/tortas/Torta-Pechuga-Pollo-CS.png">
+                            <h3>PECHUGA DE POLLO FIT</h3>
+                            <div class="product-details-row">
+                                <p>Aderezo Fit, Pechuga de Pollo Asada a la Plancha con Pimiento y Cebolla, Queso Panela Asado, Tomate y Aguacate</p>
+                                <div class="product-image-content">
+                                    <img src="img/menu/tortas/Torta-Pechuga-Pollo-CS.png" alt="Pechuga de Pollo Fit">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
+            </div>
+        </section>
+
+        <section id="combos-menu" class="menu-section active-category" data-category="combos">
+            <div class="menu-title-wrapper">
+                <div class="contenedor-menu menu-title-content">
+                    <div class="title-main">COMBO</div>
+                    <div class="title-pricing"><span>CRECE TU AGUA A 1LT POR <strong>$15</strong></span></div>
                 </div>
             </div>
 
-        </div> </div> </section>
-
-        <section id="combos-menu" class="menu-section" data-category="combos">
-    
-    <div class="menu-title-wrapper">
-        <div class="container menu-title-content">
-            <div class="title-main">COMBO</div>
-            <div class="title-pricing">
-                <span>CRECE TU AGUA A 1LT POR <strong>$15</strong></span>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <p class="menu-subtitle">Haz clic sobre los recuadros para ver con más detalle</p>
-
-        <div class="product-grid">
-
-            <div class="product-item combo-item" data-name="Combo Especial" 
-                 data-description="Elige la Torta o Hamburguesa de tu preferencia + Papas Fritas + Refresco o Vaso con Agua" 
-                 data-image="img/menu/complementos/Combo-2728429e.png">
-                <div class="product-text-content">
-                    <h3>COMBO <span class="price-inline">$165</span></h3>
-                    <p>Elige la Torta o Hamburguesa de tu preferencia + Papas Fritas + Refresco o Vaso con Agua</p>
-                </div>
-                <div class="product-image-content">
-                    <img src="img/menu/complementos/Combo-2728429e.png" alt="Combo Especial">
+            <div class="contenedor-menu">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="product-item combo-item" data-bs-toggle="modal" data-bs-target="#productModal"
+                            data-name="Combo Especial"
+                            data-description="Elige la Torta o Hamburguesa de tu preferencia + Papas Fritas + Refresco o Vaso con Agua"
+                            data-image="img/menu/complementos/Combo-2728429e.png">
+                            <h3>COMBO $165</h3>
+                            <div class="product-image-content">
+                                <img src="img/menu/complementos/Combo-2728429e.png" alt="Combo Especial">
+                            </div>
+                            <p>Elige la Torta o Hamburguesa de tu preferencia + Papas Fritas + Refresco o Vaso con Agua</p>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            </div> </div> </section>
-
-
-        <section id="tacos-menu" class="menu-section" data-category="tacos">
-    
-    <div class="menu-title-wrapper">
-        <div class="container menu-title-content">
-            <div class="title-main">TACOS</div>
-            <div class="title-pricing">
-                <span>TORTILLA DE HARINA O MAÍZ</span>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <p class="menu-subtitle">Haz clic sobre los recuadros para ver con más detalle</p>
-        <p class="menu-subtitle" style="font-weight: bold; color: #333;">Tacos De Huevo Después De Las 11:00am Sólo Se Pueden Pedir En Ordenes De 4</p>
-
-
-        <div class="product-grid">
-
-            <div class="product-item" 
-                 data-name="Taco de Bisteck" 
-                 data-description="Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U" 
-                 data-image="img/menu/tacos/Taco-Bisteck-CS.png">
-                <h3>BISTECK <span class="price-inline">$27 C/U</span></h3>
-                <div class="product-details-row">    
-                    <p>Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U</p>
-                <div class="product-image-content">
-                    <img src="img/menu/tacos/Taco-Bisteck-CS.png" alt="Taco de Bisteck">
-                </div>
+        <section id="tacos-menu" class="menu-section active-category" data-category="tacos">
+            <div class="menu-title-wrapper">
+                <div class="contenedor-menu menu-title-content">
+                    <div class="title-main">TACOS</div>
+                    <div class="title-pricing"><span>TORTILLA DE HARINA O MAÍZ</span></div>
                 </div>
             </div>
+            <div class="contenedor-menu">
+                <p class="menu-subtitle">Haz clic sobre los recuadros para ver con más detalle</p>
+                <p class="menu-subtitle subtitle-warning">Tacos De Huevo Después De Las 11:00am Sólo Se Pueden Pedir En Ordenes De 4</p>
 
-            <div class="product-item" 
-                 data-name="Taco de Chicharrón de Cachete" 
-                 data-description="Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U" 
-                 data-image="img/menu/tacos/Taco-Chicharron-CS.png">
-                    <h3>CHICHARRÓN DE CACHETE <span class="price-inline">$25 C/U</span></h3>
-                <div class="product-details-row">
-                    <p>Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U</p>
-                <div class="product-image-content">
-                    <img src="img/menu/tacos/Taco-Chicharron-CS.png" alt="Taco de Chicharrón de Cachete">
-                </div>
+                <div class="row g-4 justify-content-center">
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="product-item" data-bs-toggle="modal" data-bs-target="#productModal"
+                            data-name="Taco de Bisteck" data-description="Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U"
+                            data-image="img/menu/tacos/Taco-Bisteck-CS.png">
+                            <h3>BISTECK $27 C/U</h3>
+                            <div class="product-details-row">
+                                <p>Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U</p>
+                                <div class="product-image-content">
+                                    <img src="img/menu/tacos/Taco-Bisteck-CS.png" alt="Taco de Bisteck">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="product-item" data-bs-toggle="modal" data-bs-target="#productModal"
+                            data-name="Taco de Chicharrón de Cachete" data-description="Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U"
+                            data-image="img/menu/tacos/Taco-Chicharron-CS.png">
+                            <h3>CHICHARRÓN $25 C/U</h3>
+                            <div class="product-details-row">
+                                <p>Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U</p>
+                                <div class="product-image-content">
+                                    <img src="img/menu/tacos/Taco-Chicharron-CS.png" alt="Taco">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="product-item" data-bs-toggle="modal" data-bs-target="#productModal"
+                            data-name="Taco de Cochinita Pibil" data-description="Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U"
+                            data-image="img/menu/tacos/Taco-Cochinita-CS.png">
+                            <h3>COCHINITA $24 C/U</h3>
+                            <div class="product-details-row">
+                                <p>Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U</p>
+                                <div class="product-image-content">
+                                    <img src="img/menu/tacos/Taco-Cochinita-CS.png" alt="Taco">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="product-item" data-bs-toggle="modal" data-bs-target="#productModal"
+                            data-name="Taco de Frijol Con Queso" data-description="Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U"
+                            data-image="img/menu/tacos/Taco-Frijol-Queso-CS.png">
+                            <h3>FRIJOL CON QUESO $15 C/U</h3>
+                            <div class="product-details-row">
+                                <p>Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U</p>
+                                <div class="product-image-content">
+                                    <img src="img/menu/tacos/Taco-Frijol-Queso-CS.png" alt="Taco">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="product-item" data-bs-toggle="modal" data-bs-target="#productModal"
+                            data-name="Taco de Huevo Con Chorizo" data-description="Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U"
+                            data-image="img/menu/tacos/Taco-Huevo-Chorizo-CS.png">
+                            <h3>HUEVO CON CHORIZO $15 C/U</h3>
+                            <div class="product-details-row">
+                                <p>Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U</p>
+                                <div class="product-image-content">
+                                    <img src="img/menu/tacos/Taco-Huevo-Chorizo-CS.png" alt="Taco">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="product-item" data-bs-toggle="modal" data-bs-target="#productModal"
+                            data-name="Taco de Huevo Con Papa" data-description="Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U"
+                            data-image="img/menu/tacos/Taco-Huevo-Papa-CS.png">
+                            <h3>HUEVO CON PAPA $15 C/U</h3>
+                            <div class="product-details-row">
+                                <p>Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U</p>
+                                <div class="product-image-content">
+                                    <img src="img/menu/tacos/Taco-Huevo-Papa-CS.png" alt="Taco">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="product-item" data-bs-toggle="modal" data-bs-target="#productModal"
+                            data-name="Taco de Huevo Rojo" data-description="Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U"
+                            data-image="img/menu/tacos/Taco-Huevo-Rojo-CS.png">
+                            <h3>HUEVO ROJO $15 C/U</h3>
+                            <div class="product-details-row">
+                                <p>Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U</p>
+                                <div class="product-image-content">
+                                    <img src="img/menu/tacos/Taco-Huevo-Rojo-CS.png" alt="Taco">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="product-item" data-bs-toggle="modal" data-bs-target="#productModal"
+                            data-name="Taco de Huevo Verde" data-description="Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U"
+                            data-image="img/menu/tacos/Taco-Huevo-Verde-CS.png">
+                            <h3>HUEVO VERDE $15 C/U</h3>
+                            <div class="product-details-row">
+                                <p>Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U</p>
+                                <div class="product-image-content">
+                                    <img src="img/menu/tacos/Taco-Huevo-Verde-CS.png" alt="Taco">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="product-item" data-bs-toggle="modal" data-bs-target="#productModal"
+                            data-name="Taco de Milanesa" data-description="Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U"
+                            data-image="img/menu/tacos/Taco-Milanesa-CS.png">
+                            <h3>MILANESA $27 C/U</h3>
+                            <div class="product-details-row">
+                                <p>Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U</p>
+                                <div class="product-image-content">
+                                    <img src="img/menu/tacos/Taco-Milanesa-CS.png" alt="Taco">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="product-item" data-bs-toggle="modal" data-bs-target="#productModal"
+                            data-name="Taco de Papa Con Chorizo" data-description="Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U"
+                            data-image="img/menu/tacos/Taco-Papa-Chorizo-CS.png">
+                            <h3>PAPA CON CHORIZO $15 C/U</h3>
+                            <div class="product-details-row">
+                                <p>Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U</p>
+                                <div class="product-image-content">
+                                    <img src="img/menu/tacos/Taco-Papa-Chorizo-CS.png" alt="Taco">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="product-item" data-bs-toggle="modal" data-bs-target="#productModal"
+                            data-name="Taco de Al Pastor" data-description="Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U"
+                            data-image="img/menu/tacos/Taco-Pastor-CS.png">
+                            <h3>AL PASTOR $24 C/U</h3>
+                            <div class="product-details-row">
+                                <p>Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U</p>
+                                <div class="product-image-content">
+                                    <img src="img/menu/tacos/Taco-Pastor-CS.png" alt="Taco">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="product-item" data-bs-toggle="modal" data-bs-target="#productModal"
+                            data-name="Taco de Pechuga De Pollo" data-description="Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U"
+                            data-image="img/menu/tacos/Taco-Pollo-CS.png">
+                            <h3>PECHUGA DE POLLO $25 C/U</h3>
+                            <div class="product-details-row">
+                                <p>Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U</p>
+                                <div class="product-image-content">
+                                    <img src="img/menu/tacos/Taco-Pollo-CS.png" alt="Taco">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="product-item" data-bs-toggle="modal" data-bs-target="#productModal"
+                            data-name="Taco de Quesadilla" data-description="De Queso Fresco, Panela o Oaxaca. Agrégale Aguacate por $4 C/U"
+                            data-image="img/menu/tacos/Quesadilla-CS.png">
+                            <h3>QUESADILLA $15 C/U</h3>
+                            <div class="product-details-row">
+                                <p>De Queso Fresco, Panela o Oaxaca. Agrégale Aguacate por $4 C/U</p>
+                                <div class="product-image-content">
+                                    <img src="img/menu/tacos/Quesadilla-CS.png" alt="Taco">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
+        </section>
 
-            <div class="product-item" 
-                 data-name="Taco de Cochinita Pibil" 
-                 data-description="Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U" 
-                 data-image="img/menu/tacos/Taco-Cochinita-CS.png">
-                <h3>COCHINITA PIBIL <span class="price-inline">$24 C/U</span></h3>
-                <div class="product-details-row">  
-                    <p>Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U</p>
-                <div class="product-image-content">
-                    <img src="img/menu/tacos/Taco-Cochinita-CS.png" alt="Taco de Cochinita Pibil">
-                </div>
-                </div>
-            </div>
-
-            <div class="product-item" 
-                 data-name="Taco de Frijol Con Queso" 
-                 data-description="Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U" 
-                 data-image="img/menu/tacos/Taco-Frijol-Queso-CS.png">
-                <h3>FRIJOL CON QUESO <span class="price-inline">$15 C/U</span></h3>
-                <div class="product-details-row">    
-                    <p>Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U</p>
-                <div class="product-image-content">
-                    <img src="img/menu/tacos/Taco-Frijol-Queso-CS.png" alt="Taco de Frijol Con Queso">
-                </div>
-                </div>
-            </div>
-
-            <div class="product-item" 
-                 data-name="Taco de Huevo Con Chorizo" 
-                 data-description="Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U" 
-                 data-image="img/menu/tacos/Taco-Huevo-Chorizo-CS.png">
-                <h3>HUEVO CON CHORIZO<span class="price-inline">$15 C/U</span></h3>
-                <div class="product-details-row">    
-                    <p>Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U</p>
-                <div class="product-image-content">
-                    <img src="img/menu/tacos/Taco-Huevo-Chorizo-CS.png" alt="Taco de Huevo Con Chorizo">
-                </div>
-                </div>
-            </div>
-
-            <div class="product-item" 
-                 data-name="Taco de Huevo Con Papa" 
-                 data-description="Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U" 
-                 data-image="img/menu/tacos/Taco-Huevo-Papa-CS.png">
-                <h3>HUEVO CON PAPA<span class="price-inline">$15 C/U</span></h3>
-                <div class="product-details-row">
-                    <p>Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U</p>
-                <div class="product-image-content">
-                    <img src="img/menu/tacos/Taco-Huevo-Papa-CS.png" alt="Taco de Huevo Con Papa">
-                </div>
-                </div>
-            </div>
-
-            <div class="product-item" 
-                 data-name="Taco de Huevo Rojo" 
-                 data-description="Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U" 
-                 data-image="img/menu/tacos/Taco-Huevo-Rojo-CS.png">
-                <h3>HUEVO ROJO<span class="price-inline">$15 C/U</span></h3>
-                <div class="product-details-row">    
-                    <p>Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U</p>
-                <div class="product-image-content">
-                    <img src="img/menu/tacos/Taco-Huevo-Rojo-CS.png" alt="Taco de Huevo Rojo">
-                </div>
-                </div>
-            </div>
-
-            <div class="product-item" 
-                 data-name="Taco de Huevo Verde" 
-                 data-description="Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U" 
-                 data-image="img/menu/tacos/Taco-Huevo-Verde-CS.png">
-                <h3>HUEVO VERDE <span class="price-inline">$15 C/U</span></h3>
-                <div class="product-details-row">    
-                    <p>Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U</p>
-                <div class="product-image-content">
-                    <img src="img/menu/tacos/Taco-Huevo-Verde-CS.png" alt="Taco de Huevo Verde">
-                </div>
-                </div>
-            </div>
-
-            <div class="product-item" 
-                 data-name="Taco de Milanesa" 
-                 data-description="Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U" 
-                 data-image="img/menu/tacos/Taco-Milanesa-CS.png">
-                <h3>MILANESA <span class="price-inline">$27 C/U</span></h3>
-                <div class="product-details-row">    
-                    <p>Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U</p>
-                <div class="product-image-content">
-                    <img src="img/menu/tacos/Taco-Milanesa-CS.png" alt="Taco de Milanesa">
-                </div>
-                </div>
-            </div>
-
-            <div class="product-item" 
-                 data-name="Taco de Papa Con Chorizo" 
-                 data-description="Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U" 
-                 data-image="img/menu/tacos/Taco-Papa-Chorizo-CS.png">
-                <h3>PAPA CON CHORIZO <span class="price-inline">$15 C/U</span></h3>
-                <div class="product-details-row">    
-                    <p>Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U</p>
-                <div class="product-image-content">
-                    <img src="img/menu/tacos/Taco-Papa-Chorizo-CS.png" alt="Taco de Papa Con Chorizo">
-                </div>
-                </div>
-            </div>
-
-            <div class="product-item" 
-                 data-name="Taco de Al Pastor" 
-                 data-description="Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U" 
-                 data-image="img/menu/tacos/Taco-Pastor-CS.png">
-                <h3>AL PASTOR <span class="price-inline">$24 C/U</span></h3>
-                <div class="product-details-row">    
-                    <p>Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U</p>
-                <div class="product-image-content">
-                    <img src="img/menu/tacos/Taco-Pastor-CS.png" alt="Taco de Al Pastor">
-                </div>
-                </div>
-            </div>
-
-            <div class="product-item" 
-                 data-name="Taco de Pechuga De Pollo" 
-                 data-description="Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U" 
-                 data-image="img/menu/tacos/Taco-Pollo-CS.png">
-                <h3>PECHUGA DE POLLO <span class="price-inline">$25 C/U</span></h3>
-                <div class="product-details-row">    
-                    <p>Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U</p>
-                <div class="product-image-content">
-                    <img src="img/menu/tacos/Taco-Pollo-CS.png" alt="Taco de Pechuga De Pollo">
-                </div>
-                </div>
-            </div>
-
-            <div class="product-item" 
-                 data-name="Taco de Quesadilla" 
-                 data-description="Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U" 
-                 data-image="img/menu/tacos/Quesadilla-CS.png">
-                <h3>QUESADILLA <span class="price-inline">$15 C/U</span></h3>
-                <div class="product-details-row">    
-                    <p>Agrégale A Tus Tacos: Aguacate, Queso Fresco O Oaxaca Por $4 C/U</p>
-                <div class="product-image-content">
-                    <img src="img/menu/tacos/Quesadilla-CS.png" alt="Taco de Quesadilla">
-                </div>
-                </div>
-            </div>
-
-            </div> </div> </section>
-
-
-            <section id="bebidas-menu" class="menu-section" data-category="bebidas">
-    
-    <div class="menu-title-wrapper">
-        <div class="container menu-title-content">
-            <div class="title-main">BEBIDAS</div>
-        </div>
-    </div>
-
-    <div class="container">
-        <p class="menu-subtitle">Haz clic sobre los recuadros para ver con más detalle</p>
-
-        <div class="product-grid">
-
-            <div class="product-item drink-item" data-name="Agua de Horchata" 
-                 data-description="Vaso de Medio $34 | Litro $52" 
-                 data-image="img/menu/bebidas/Horchata.png">
-                <div class="product-text-content">
-                    <h3>AGUA DE HORCHATA</h3>
-                </div>
-                <div class="product-image-content">
-                    <img src="img/menu/bebidas/Horchata.png" alt="Agua de Horchata">
-                </div>
-                <div class="product-pricing-content">
-                    <p>Vaso de Medio <strong>$34</strong></p>
-                    <p>Litro <strong>$52</strong></p>
+        <section id="bebidas-menu" class="menu-section active-category" data-category="bebidas">
+            <div class="menu-title-wrapper">
+                <div class="contenedor-menu menu-title-content">
+                    <div class="title-main">BEBIDAS</div>
                 </div>
             </div>
 
-            <div class="product-item drink-item"
-                 data-name="Agua de Jamaica" 
-                 data-description="Vaso de Medio $34 | Litro $52" 
-                 data-image="img/menu/bebidas/Jamaica.png">
-                <div class="product-text-content">
-                    <h3>AGUA DE JAMAICA</h3>
-                </div>
-                <div class="product-image-content">
-                    <img src="img/menu/bebidas/Jamaica.png" alt="Agua de Jamaica">
-                </div>
-                <div class="product-pricing-content">
-                    <p>Vaso de Medio <strong>$34</strong></p>
-                    <p>Litro <strong>$52</strong></p>
-                </div>
-            </div>
-
-            <div class="product-item drink-item"
-                 data-name="Café" 
-                 data-description="Con Leche y Azúcar al Gusto $28" 
-                 data-image="img/menu/bebidas/Vaso-de-cafe.png">
-                <div class="product-text-content">
-                    <h3>CAFÉ</h3>
-                </div>
-                <div class="product-image-content">
-                    <img src="img/menu/bebidas/Vaso-de-cafe.png" alt="Café">
-                </div>
-                <div class="product-pricing-content">
-                    <p>Con Leche y Azúcar al Gusto</p>
-                    <p><strong>$28</strong></p>
-                </div>
-            </div>
-
-        </div> </div> 
-
-        <div class="soda-section-wrapper">
-    <div class="container">
-        <h3 class="soda-section-title">REFRESCOS $34</h3>
-
-        <div class="soda-carousel-container">
-            <button class="soda-arrow prev-soda">&#10094;</button>
-            <div class="soda-carousel">
+            <div class="contenedor-menu">
                 
-                <div class="soda-slide">
-                    <h4>COCA-COLA</h4>
-                    <img src="img/menu/bebidas/cocacola.png" alt="Coca-Cola">
-                </div>
+                <div class="row g-4 justify-content-center mb-5">
+                    
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="product-item drink-item" data-name="Agua de Horchata"
+                            data-description="Vaso de Medio $34 | Litro $52" data-image="img/menu/bebidas/Horchata.png">
+                            <h3>AGUA DE HORCHATA</h3>
+                            <div class="product-image-content">
+                                <img src="img/menu/bebidas/Horchata.png" alt="Agua de Horchata">
+                            </div>
+                            <div class="product-pricing-content">
+                                <p>Vaso de Medio <strong>$34</strong></p>
+                                <p>Litro <strong>$52</strong></p>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="soda-slide">
-                    <h4>COCA-COLA LIGHT</h4>
-                    <img src="img/menu/bebidas/cocalight-A.png" alt="Coca-Cola Light">
-                </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="product-item drink-item" data-name="Agua de Jamaica"
+                            data-description="Vaso de Medio $34 | Litro $52" data-image="img/menu/bebidas/Jamaica.png">
+                            <h3>AGUA DE JAMAICA</h3>
+                            <div class="product-image-content">
+                                <img src="img/menu/bebidas/Jamaica.png" alt="Agua de Jamaica">
+                            </div>
+                            <div class="product-pricing-content">
+                                <p>Vaso de Medio <strong>$34</strong></p>
+                                <p>Litro <strong>$52</strong></p>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="soda-slide">
-                    <h4>COCA-COLA ZERO</h4>
-                    <img src="img/menu/bebidas/cocacolasinazucar-A.png" alt="Coca-Cola Zero">
-                </div>
-                
-                <div class="soda-slide">
-                    <h4>SPRITE</h4>
-                    <img src="img/menu/bebidas/sprite-A.png" alt="Sprite">
-                </div>
-
-                <div class="soda-slide">
-                    <h4>FANTA</h4>
-                    <img src="img/menu/bebidas/fanta-A.png" alt="Fanta">
-                </div>
-
-                <div class="soda-slide">
-                    <h4>DELAWARE</h4>
-                    <img src="img/menu/bebidas/delaware-A.png" alt="Delaware">
-                </div>
-
-                <div class="soda-slide">
-                    <h4>ESCUIS DE MANZANA</h4>
-                    <img src="img/menu/bebidas/escuismanzana-A.png" alt="Escuis de manzana">
-                </div>
-
-                <div class="soda-slide">
-                    <h4>ESCUIS DE PIÑA</h4>
-                    <img src="img/menu/bebidas/escuispiña-A.png" alt="Escuis de piña">
-                </div>
-
-                <div class="soda-slide">
-                    <h4>ESCUIS DE FRESA</h4>
-                    <img src="img/menu/bebidas/escuisfresa-A.png" alt="Escuis de fresa">
-                </div>
-
-                <div class="soda-slide">
-                    <h4>ESCUIS DE HIERRO</h4>
-                    <img src="img/menu/bebidas/escuishierro-A.png" alt="Escuis de hierro">
-                </div>
-
-                <div class="soda-slide">
-                    <h4>TOPOCHICO</h4>
-                    <img src="img/menu/bebidas/topochico-A.png" alt="Topochico">
-                </div>
-
-                <div class="soda-slide">
-                    <h4>AGUA CIEL</h4>
-                    <img src="img/menu/bebidas/aguaciel-A.png" alt="Agua ciel">
-                </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="product-item drink-item" data-name="Café"
+                            data-description="Con Leche y Azúcar al Gusto $28" data-image="img/menu/bebidas/Vaso-de-cafe.png">
+                            <h3>CAFÉ</h3>
+                            <div class="product-image-content">
+                                <img src="img/menu/bebidas/Vaso-de-cafe.png" alt="Café">
+                            </div>
+                            <div class="product-pricing-content">
+                                <p>Con Leche y Azúcar al Gusto</p>
+                                <p><strong>$28</strong></p>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
-            <button class="soda-arrow next-soda">&#10095;</button>
-        </div>
-    </div>
-</div>
-    </section>
 
+                <div class="soda-section-wrapper">
+                    <h3 class="soda-section-title">REFRESCOS $34</h3>
+                    
+                    <div class="carousel-main-container" id="refrescos-carousel">
+                        <button class="soda-arrow prev-arrow">&#10094;</button>
+                        
+                        <div class="carousel-track-container">
+                            <div class="carousel-track">
+                                <div class="soda-slide">
+                                    <h4>COCA-COLA</h4><img src="img/menu/bebidas/cocacola.png">
+                                </div>
+                                <div class="soda-slide">
+                                    <h4>COCA-COLA LIGHT</h4><img src="img/menu/bebidas/cocalight-A.png">
+                                </div>
+                                <div class="soda-slide">
+                                    <h4>COCA-COLA ZERO</h4><img src="img/menu/bebidas/cocacolasinazucar-A.png">
+                                </div>
+                                <div class="soda-slide">
+                                    <h4>SPRITE</h4><img src="img/menu/bebidas/sprite-A.png">
+                                </div>
+                                <div class="soda-slide">
+                                    <h4>FANTA</h4><img src="img/menu/bebidas/fanta-A.png">
+                                </div>
+                                <div class="soda-slide">
+                                    <h4>DELAWARE</h4><img src="img/menu/bebidas/delaware-A.png">
+                                </div>
+                                <div class="soda-slide">
+                                    <h4>ESCUIS DE MANZANA</h4><img src="img/menu/bebidas/escuismanzana-A.png">
+                                </div>
+                                <div class="soda-slide">
+                                    <h4>ESCUIS DE PIÑA</h4><img src="img/menu/bebidas/escuispiña-A.png">
+                                </div>
+                                <div class="soda-slide">
+                                    <h4>ESCUIS DE FRESA</h4><img src="img/menu/bebidas/escuisfresa-A.png">
+                                </div>
+                                <div class="soda-slide">
+                                    <h4>ESCUIS DE HIERRO</h4><img src="img/menu/bebidas/escuishierro-A.png">
+                                </div>
+                                <div class="soda-slide">
+                                    <h4>TOPOCHICO</h4><img src="img/menu/bebidas/topochico-A.png">
+                                </div>
+                                <div class="soda-slide">
+                                    <h4>AGUA CIEL</h4><img src="img/menu/bebidas/aguaciel-A.png">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="soda-arrow next-arrow">&#10095;</button>
+                    </div>
+                </div>
 
-    <section id="complementos-menu" class="menu-section" data-category="complementos">
-             <div class="menu-title-wrapper">
-                <div class="container menu-title-content">
+            </div>
+        </section>
+
+        <section id="complementos-menu" class="menu-section active-category" data-category="complementos">
+            <div class="menu-title-wrapper">
+                <div class="contenedor-menu menu-title-content">
                     <div class="title-main">COMPLEMENTOS</div>
                 </div>
             </div>
-            <div class="container">
-                <p class="menu-subtitle">Haz clic sobre los recuadros para ver con más detalle</p>
-                <h3 class="soda-section-title">SALSAS</h3>
-                <div class="salsas-carousel-container"> 
-                    <button class="soda-arrow prev-salsa">&#10094;</button>
-                    <div class="salsas-carousel">
-                        <div class="soda-slide"><h4>SALSA VERDE</h4><img src="img/menu/complementos/Tortas-Jerry-Salsa-Verde-CS.png" alt="Salsa Verde"></div>
 
-                        <div class="soda-slide"><h4>SALSA DE CACAHUATE</h4><img src="img/menu/complementos/Tortas-Jerry-Salsa-Cacahuate-CS.png" alt="Salsa de Cacahuate"></div>
-
-                        <div class="soda-slide"><h4>SALSA DE CHICHARRON</h4><img src="img/menu/complementos/Tortas-Jerry-Salsa-de-Chicharron-CS.png" alt="Salsa de Chicharron"></div>
-
-                        <div class="soda-slide"><h4>SALSA DE CHIPOTLE</h4><img src="img/menu/complementos/Tortas-Jerry-Salsa-Chipotle-CS.png" alt="Salsa de Chipotle"></div>
-
-                        <div class="soda-slide"><h4>SALSA DE HABANERO</h4><img src="img/menu/complementos/Tortas-Jerry-Habanero-CS.png" alt="Salsa Habanero"></div>
-
-                        <div class="soda-slide"><h4>ADEREZO JERRY</h4><img src="img/menu/complementos/Tortas-Jerry-Aderezo-Jerry-CS.png" alt="Aderezo Jerry"></div>
+            <div class="contenedor-menu">
+                
+                <div class="salsas-wrapper">
+                    <h3 class="soda-section-title text-rojo-primary">SALSAS</h3>
+                    
+                    <div class="carousel-main-container" id="salsas-carousel">
+                        <button class="soda-arrow prev-arrow">&#10094;</button>
                         
-                        <div class="soda-slide"><h4>ADEREZO DE CHIPOTLE</h4><img src="img/menu/complementos/Tortas-Jerry-Aderezo-Chipotle-CS.png" alt="Aderezo Chipotle"></div>
-
+                        <div class="carousel-track-container">
+                            <div class="carousel-track">
+                                <div class="soda-slide">
+                                    <h4>SALSA VERDE</h4><img src="img/menu/complementos/Tortas-Jerry-Salsa-Verde-CS.png">
+                                </div>
+                                <div class="soda-slide">
+                                    <h4>SALSA CACAHUATE</h4><img src="img/menu/complementos/Tortas-Jerry-Salsa-Cacahuate-CS.png">
+                                </div>
+                                <div class="soda-slide">
+                                    <h4>SALSA CHICHARRÓN</h4><img src="img/menu/complementos/Tortas-Jerry-Salsa-de-Chicharron-CS.png">
+                                </div>
+                                <div class="soda-slide">
+                                    <h4>SALSA CHIPOTLE</h4><img src="img/menu/complementos/Tortas-Jerry-Salsa-Chipotle-CS.png">
+                                </div>
+                                <div class="soda-slide">
+                                    <h4>SALSA HABANERO</h4><img src="img/menu/complementos/Tortas-Jerry-Habanero-CS.png">
+                                </div>
+                                <div class="soda-slide">
+                                    <h4>ADEREZO JERRY</h4><img src="img/menu/complementos/Tortas-Jerry-Aderezo-Jerry-CS.png">
+                                </div>
+                                <div class="soda-slide">
+                                    <h4>ADEREZO DE CHIPOTLE</h4><img src="img/menu/complementos/Tortas-Jerry-Aderezo-Chipotle-CS.png">
+                                </div>
+                            </div>
                         </div>
-                    <button class="soda-arrow next-salsa">&#10095;</button>
+                        
+                        <button class="soda-arrow next-arrow">&#10095;</button>
+                    </div>
                 </div>
+
             </div>
         </section>
-        
+
     </main>
 
-
-    <div id="product-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <img id="modal-image" src="" alt="Producto en detalle">
-            <h3 id="modal-name"></h3>
-            <p id="modal-description"></p>
-        </div>
-    </div>
-
-    <footer>
-    <div class="container">
-        <div class="footer-content">
-
-            <div class="footer-column footer-brand">
-                <img src="img/logotortasjerry.png" alt="Logo Tortas Jerry" class="footer-logo">
-                <p class="copyright">&copy; 2025 Tortas Jerry</p>
-            </div>
-
-            <div class="footer-column">
-                <h4>Navegación</h4>
-                <ul class="footer-links">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="menu.html">Menú</a></li>
-                    <li><a href="sucursales.html">Sucursales</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-column">
-                <h4>Sugerencias</h4>
-                <ul class="footer-links-with-icons">
-                    <li>
-                        <a href="mailto:info@tortasjerry.com">
-                            <img src="img/iconosfooter/Recurso8emailfondoblanco.png" alt="Email">
-                            <span>Correo Electrónico</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://wa.me/+528332178711">
-                            <img src="img/iconosfooter/Recurso7whatsfondoblanco.png" alt="Mensaje de Texto">
-                            <span>Mensaje de Texto</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="footer-column">
-                <h4>Redes Sociales</h4>
-                <ul class="footer-links-with-icons">
-                    <li>
-                        <a href="https://www.facebook.com/tortasjerryoficial/" target="_blank">
-                            <img src="img/iconosfooter/Recurso5facefondoblanco.png" alt="Facebook">
-                            <span>Facebook</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/tortas_jerry/?hl=es-la" target="_blank">
-                            <img src="img/iconosfooter/Recurso6instafondoblanco.png" alt="Instagram">
-                            <span>Instagram</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="footer-column">
-                <h4>Horarios de Atención</h4>
-                <div class="footer-info-item">
-                    <img src="img/iconosfooter/Recurso 20horariofondoblanco.png" alt="Horario">
-                    <span>8:00am - 9:00pm<br>De Lunes a Domingo</span>
+    <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center p-4">
+                <div class="modal-header border-0 p-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img id="modal-image" src="" alt="Producto" class="img-fluid rounded mb-3 modal-img-custom">
+                    <h3 id="modal-name"></h3>
+                    <p id="modal-description"></p>
                 </div>
             </div>
-
         </div>
     </div>
-</footer>
 
-    <script src="menu_script.js"></script>
+    <footer class="pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4 text-center text-md-start">
+                
+                <div class="col-12 col-md-3 footer-brand text-center text-md-start">
+                    <img src="img/logotortasjerry.png" alt="Logo Tortas Jerry" class="footer-logo mb-3">
+                    <p class="copyright">&copy; 2025 Tortas Jerry</p>
+                </div>
+
+                <div class="col-12 col-md-2">
+                    <h4>Navegación</h4>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="menu.html">Menú</a></li>
+                        <li><a href="sucursales.html">Sucursales</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-3">
+                    <h4>Sugerencias</h4>
+                    <ul class="list-unstyled footer-links-with-icons">
+                        <li class="mb-2">
+                            <a href="mailto:info@tortasjerry.com"
+                                class="d-flex align-items-center justify-content-center justify-content-md-start gap-2">
+                                <img src="img/iconosfooter/Recurso8emailfondoblanco.png" alt="Email" class="footer-icon">
+                                <span>Correo Electrónico</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/+528332178711"
+                                class="d-flex align-items-center justify-content-center justify-content-md-start gap-2">
+                                <img src="img/iconosfooter/Recurso7whatsfondoblanco.png" alt="WhatsApp" class="footer-icon">
+                                <span>Mensaje de Texto</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <h4>Redes Sociales</h4>
+                    <ul
+                        class="list-unstyled footer-links-with-icons d-flex justify-content-center justify-content-md-start gap-3 mb-3">
+                        <li>
+                            <a href="https://www.facebook.com/tortasjerryoficial/" target="_blank">
+                                <img src="img/iconosfooter/Recurso5facefondoblanco.png" alt="Facebook" class="footer-icon social-icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/tortas_jerry/?hl=es" target="_blank">
+                                <img src="img/iconosfooter/Recurso6instafondoblanco.png" alt="Instagram" class="footer-icon social-icon">
+                            </a>
+                        </li>
+                    </ul>
+                    <h4 class="mt-4">Horarios</h4>
+                    <div
+                        class="footer-info-item d-flex align-items-center justify-content-center justify-content-md-start gap-2">
+                        <img src="img/iconosfooter/Recurso 20horariofondoblanco.png" alt="Horario" class="footer-icon">
+                        <span>8:00am - 9:00pm<br>De Lunes a Domingo</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/estilojs.js"></script>
 </body>
+
 </html>

@@ -1,145 +1,166 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosotros - Tortas Jerry Tampico</title>
-    <link rel="stylesheet" href="nosotros_style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Nunito+Sans:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
-<body>
+
+<body class="nosotros-body">
 
     <header>
-        <nav>
-            <a href="index.html"><img src="img/logotortasjerry.png" alt="Logo Tortas Jerry" class="logo"></a>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="menu.html">Menú</a></li>
-                <li><a href="sucursales.html">Sucursales</a></li>
-                <li><a href="nosotros.html" class="active">Nosotros</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg fixed-top custom-navbar p-0">
+            <div class="container-xxl">
+                <a class="navbar-brand py-2" href="index.html">
+                    <img src="img/logotortasjerry.png" alt="Logo Tortas Jerry" class="logo-nav">
+                </a>
+                
+                <button class="navbar-toggler custom-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                    <div class="hamburger-lines">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </div>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav align-items-center">
+                        <li class="nav-item h-100">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item h-100">
+                            <a class="nav-link" href="menu.html">Menú</a>
+                        </li>
+                        <li class="nav-item h-100">
+                            <a class="nav-link" href="sucursales.html">Sucursales</a>
+                        </li>
+                        <li class="nav-item h-100">
+                            <a class="nav-link active" href="nosotros.html">Nosotros</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <main>
+    <main class="nosotros-page-content">
+
         <section class="about-section">
-            <div class="container">
-                <h2 class="section-title-alt">SOBRE NOSOTROS</h2>
-                <div class="about-content-wrapper">
-                    <div class="about-image">
-                        <img src="img/Tortas-Jerry-About-c61a14f0.jpg" alt="Torta de Tortas Jerry">
+            <div class="container-xxl">
+                <h2 class="about-title-main">SOBRE NOSOTROS</h2>
+                
+                <div class="row align-items-center g-5">
+                    <div class="col-12 col-lg-6">
+                        <div class="about-image-wrapper">
+                            <img src="img/Tortas-Jerry-About-c61a14f0.jpg" alt="Dueño de Tortas Jerry" class="img-fluid">
+                        </div>
                     </div>
-                    <div class="about-text">
-                        <h3>BIENVENIDO A TORTAS JERRY, DONDE LAS TORTAS SON SOLO EL COMIENZO</h3>
-                        <p>Comenzamos como un pequeño lugar con una gran pasión por las tortas, pero con el tiempo hemos ampliado nuestro menú para ofrecer una experiencia gastronómica aún más completa. Ahora podrás disfrutar de deliciosos tacos y jugosas hamburguesas, todos preparados con ingredientes frescos y de la más alta calidad. Personaliza con nuestras deliciosas salsas y aderezos.</p>
+                    
+                    <div class="col-12 col-lg-6 ps-lg-5">
+                        <div class="about-text-content">
+                            <h3>BIENVENIDO A TORTAS JERRY, DONDE LAS TORTAS SON SOLO EL COMIENZO</h3>
+                            <p>Comenzamos como un pequeño lugar con una gran pasión por las tortas, pero con el tiempo hemos ampliado nuestro menú para ofrecer una experiencia gastronómica aún más completa. Ahora podrás disfrutar de deliciosos tacos y jugosas hamburguesas, todos preparados con ingredientes frescos y de la más alta calidad. Personaliza con nuestras deliciosas salsas y aderezos.</p>
+                            <p>El 18 de octubre del año 2000, nació Tortas Jerry, inspirado por un sueño: crear una torta que no solo deleitara al paladar, sino que representara con orgullo la gran cocina y los sabores tradicionales de las familias mexicanas.</p>
+                            <p>Desde niño, Jerry aprendió de su madre una lección que marcaría su vida: la comida se prepara con amor y con calidad, porque es una forma de cuidar a quienes más queremos. Con esa enseñanza en el corazón, decidió transformar un alimento tan cotidiano como la torta en algo especial: un platillo lleno de sabor, hecho con ingredientes frescos, higiene impecable y el toque único que conquista a chicos y grandes.</p>
+                            <p>Junto a él, Marta, su esposa y compañera de vida, aporto su pasión por las ventas, el servicio al cliente y una gran capacidad de organización que también heredo de su madre. La unión de sus talentos fue la receta perfecta para levantar un proyecto único y llevar el nombre de Tortas Jerry a la mesa de Tampico, México.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row align-items-center g-5 mt-4">
+                    <div class="col-12 col-lg-6 pe-lg-5">
+                        <div class="about-text-content">
+                            <p>El camino no fue fácil. Fueron años de trabajo duro, de levantarse muy temprano hasta terminar tarde, de sacrificar muchas cosas, y de enfrentar retos que solo el amor por lo que haces te da la fuerza para superar.</p>
+                            <p>Todo comenzó en un pequeño espacio con una barra, un carrito, cuatro mesas y el apoyo incondicional de su familia. Poco a poco, con esfuerzo e innovación, aquel rincón fue creciendo: primero un local con más mesas, luego una cocina propia y un pequeño equipo de trabajo. Hoy, Tortas Jerry es un restaurante con áreas climatizadas, instalaciones de primer nivel, un menú variado para todos los gustos y una gran familia de colaboradores que comparten la misma misión: conservar la calidad, el sabor y el servicio que nos han acompañado desde el primer día.</p>
+                            <p>Pero más allá de un restaurante, Tortas Jerry es parte de la comunidad. Aquí hemos visto a los clientes convertirse en amigos, a familias crecer y a generaciones enteras compartir una mesa. Ese es nuestro mayor orgullo: saber que cada torta lleva un pedacito de historia, tradición y cariño. Porque aquí, cada torta cuenta una historia… y la tuya siempre será bienvenida.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12 col-lg-6">
+
+                        <div class="about-image-wrapper">
+                            <img src="img/imagennosotros2.jpg" alt="Torta de Tortas Jerry" class="img-fluid">
+                        </div>
+                        
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="pillars-section">
-            <div class="container">
-                <h2 class="section-title-alt">NUESTROS PILARES</h2>
+            <div class="container-xxl">
+                <h2 class="pillars-title-main">NUESTROS PILARES</h2>
                 <p class="section-description">Haz clic sobre los recuadros para saber más de nuestra filosofía</p>
 
                 <div class="pillars-container">
+                    
                     <div class="pillar-box">
+                        <div class="pillar-title">FILOSOFÍA</div>
+                        <div class="pillar-content">
+                            <p>En Tortas Jerry nos esforzamos todos los días en seleccionar los mejores ingredientes para prepararlos y cocinarlos al momento, sin conservadores y con especial atención a cada detalle. Todo esto para ofrecer alimentos frescos y de la más alta calidad, acompañados de un servicio y una atención excepcionales, con el único propósito de brindar siempre lo mejor.</p>
+                            <p>Estamos comprometidos con la higiene y la salud de nuestros clientes, cumpliendo en todo momento con los más altos estándares de calidad y servicio, para que puedan disfrutar de alimentos completos, frescos y saludables.</p>
+                            <p>Nos motiva el reconocimiento de nuestros clientes leales, quienes nos visitan día con día y nos recomiendan como su comida favorita entre familiares y amigos. También nos enorgullece profundamente el entusiasmo de nuestro equipo: personas integras, cumplidas y apasionadas que dan lo mejor de sí en todo momento.</p>
+                        </div>
+                    </div>
+
+                    <div class="pillar-box active"> 
                         <div class="pillar-title">MISIÓN</div>
                         <div class="pillar-content">
-                            <p>Ofrecer alimentos de la más alta calidad, con un sabor casero inigualable y un servicio rápido y amable que supere las expectativas de nuestros clientes en cada visita.</p>
+                            <p>Ofrecer un platillo lleno de sabor, hecho con ingredientes frescos, higiene impecable y el toque único que conquista a chicos y grandes.</p>
                         </div>
                     </div>
-                    <div class="pillar-box active"> <div class="pillar-title">VISIÓN</div>
-                        <div class="pillar-content">
-                            <p>Ser la cadena de restaurantes de comida rápida preferida en la región, reconocida por la excelencia de nuestras tortas y la innovación constante en nuestro menú.</p>
-                        </div>
-                    </div>
-                    <div class="pillar-box">
-                        <div class="pillar-title">VALORES</div>
-                        <div class="pillar-content">
-                            <ul>
-                                <li><strong>Calidad:</strong> Ingredientes frescos siempre.</li>
-                                <li><strong>Servicio:</strong> Atención que te hace sentir en casa.</li>
-                                <li><strong>Pasión:</strong> Amor por lo que hacemos.</li>
-                                <li><strong>Comunidad:</strong> Orgullosos de nuestras raíces.</li>
-                            </ul>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </section>
 
     </main>
 
-    <footer>
-    <div class="container">
-        <div class="footer-content">
-
-            <div class="footer-column footer-brand">
-                <img src="img/logotortasjerry.png" alt="Logo Tortas Jerry" class="footer-logo">
-                <p class="copyright">&copy; 2025 Tortas Jerry</p>
-            </div>
-
-            <div class="footer-column">
-                <h4>Navegación</h4>
-                <ul class="footer-links">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="menu.html">Menú</a></li>
-                    <li><a href="sucursales.html">Sucursales</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-column">
-                <h4>Sugerencias</h4>
-                <ul class="footer-links-with-icons">
-                    <li>
-                        <a href="mailto:info@tortasjerry.com">
-                            <img src="img/iconosfooter/Recurso8emailfondoblanco.png" alt="Email">
-                            <span>Correo Electrónico</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://wa.me/+528332178711">
-                            <img src="img/iconosfooter/Recurso7whatsfondoblanco.png" alt="Mensaje de Texto">
-                            <span>Mensaje de Texto</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="footer-column">
-                <h4>Redes Sociales</h4>
-                <ul class="footer-links-with-icons">
-                    <li>
-                        <a href="#" target="_blank">
-                            <img src="https://www.facebook.com/tortasjerryoficial/" alt="Facebook">
-                            <span>Facebook</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/tortas_jerry/?hl=es-la" target="_blank">
-                            <img src="img/iconosfooter/Recurso6instafondoblanco.png" alt="Instagram">
-                            <span>Instagram</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="footer-column">
-                <h4>Horarios de Atención</h4>
-                <div class="footer-info-item">
-                    <img src="img/iconosfooter/Recurso 20horariofondoblanco.png" alt="Horario">
-                    <span>8:00am - 9:00pm<br>De Lunes a Domingo</span>
+    <footer class="pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4 text-center text-md-start">
+                <div class="col-12 col-md-3 footer-brand text-center text-md-start">
+                    <img src="img/logotortasjerry.png" alt="Logo Tortas Jerry" class="footer-logo mb-3">
+                    <p class="copyright">&copy; 2025 Tortas Jerry</p>
+                </div>
+                <div class="col-12 col-md-2">
+                    <h4>Navegación</h4>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="menu.html">Menú</a></li>
+                        <li><a href="sucursales.html">Sucursales</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-3">
+                    <h4>Sugerencias</h4>
+                    <ul class="list-unstyled footer-links-with-icons">
+                        <li class="mb-2"><a href="mailto:info@tortasjerry.com" class="d-flex align-items-center justify-content-center justify-content-md-start gap-2"><img src="img/iconosfooter/Recurso8emailfondoblanco.png" alt="Email" class="footer-icon"> <span>Correo Electrónico</span></a></li>
+                        <li><a href="https://wa.me/+528332178711" class="d-flex align-items-center justify-content-center justify-content-md-start gap-2"><img src="img/iconosfooter/Recurso7whatsfondoblanco.png" alt="WhatsApp" class="footer-icon"> <span>Mensaje de Texto</span></a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h4>Redes Sociales</h4>
+                    <ul class="list-unstyled footer-links-with-icons d-flex justify-content-center justify-content-md-start gap-3 mb-3">
+                        <li><a href="https://www.facebook.com/tortasjerryoficial/" target="_blank"><img src="img/iconosfooter/Recurso5facefondoblanco.png" alt="Facebook" class="footer-icon social-icon"></a></li>
+                        <li><a href="https://www.instagram.com/tortas_jerry/?hl=es-la" target="_blank"><img src="img/iconosfooter/Recurso6instafondoblanco.png" alt="Instagram" class="footer-icon social-icon"></a></li>
+                    </ul>
+                    <h4 class="mt-4">Horarios</h4>
+                    <div class="footer-info-item d-flex align-items-center justify-content-center justify-content-md-start gap-2">
+                        <img src="img/iconosfooter/Recurso 20horariofondoblanco.png" alt="Horario" class="footer-icon">
+                        <span>8:00am - 9:00pm<br>De Lunes a Domingo</span>
+                    </div>
                 </div>
             </div>
-
         </div>
-    </div>
-</footer>
+    </footer>
 
-    <script src="nosotros_script.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/estilojs.js"></script>
 </body>
 </html>

@@ -4,221 +4,233 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tortas Jerry Tampico - Inicio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
     <header>
-        <nav>
-            <a href="#inicio"><img src="img/logotortasjerry.png" alt="Logo Tortas Jerry" class="logo"></a>
-            <ul>
-                <li><a href="index.html" class="active">Inicio</a></li>
-                <li><a href="menu.html">Menú</a></li>
-                <li><a href="sucursales.html">Sucursales</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg fixed-top custom-navbar p-0">
+            <div class="container-xxl">
+                
+                <a class="navbar-brand py-2" href="#inicio">
+                    <img src="img/logotortasjerry.png" alt="Logo Tortas Jerry" class="logo-nav">
+                </a>
+
+                <button class="navbar-toggler custom-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="hamburger-lines">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </div>
+                </button>
+                
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav align-items-center">
+                        <li class="nav-item h-100"><a class="nav-link active" href="index.html">Inicio</a></li>
+                        <li class="nav-item h-100"><a class="nav-link" href="menu.html">Menú</a></li>
+                        <li class="nav-item h-100"><a class="nav-link" href="sucursales.html">Sucursales</a></li>
+                        <li class="nav-item h-100"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
     <main>
-        <section id="inicio" class="hero-section">
+        <section id="inicio" class="hero-section d-flex align-items-center justify-content-center">
             <div class="hero-overlay"></div>
-            <div class="hero-content">
-                <div class="social-icons">
+            <div class="hero-content text-center container">
+                <div class="social-icons mb-4">
                     <a href="https://www.facebook.com/tortasjerryoficial/" target="_blank"><img src="img/iconos/recurso9facefondotrans.png" alt="Facebook"></a>
-                    <a href="https://www.instagram.com/tortas_jerry/?hl=es-la" target="_blank"><img src="img/iconos/recurso10instafondotrans.png" alt="Instagram"></a>
+                    <a href="https://www.instagram.com/tortas_jerry/?hl=es" target="_blank"><img src="img/iconos/recurso10instafondotrans.png" alt="Instagram"></a>
                     <a href="https://wa.me/+528332178711" target="_blank"><img src="img/iconos/recurso11whatsfondotrans.png" alt="WhatsApp"></a>
                     <a href="mailto:info@tortasjerry.com"><img src="img/iconos/recurso12emailfondotrans.png" alt="E-mail"></a>
                 </div>
                 <h1>¡BIENVENIDOS!</h1>
-                <p>#YaHaceHambre</p>
-                <a href="#recien-agregado" class="btn">Ver Más</a>
+                <p class="hero-subtitle">#YaHaceHambre</p>
+                <a href="#recien-agregado" class="btn btn-custom mt-4">Ver Más</a>
             </div>
         </section>
 
-        <section id="recien-agregado" class="slider-section">
+        <section id="recien-agregado" class="slider-section text-center">
             <div class="container"> 
-                <h2>EN TORTAS JERRY SIEMPRE ESTAMOS INNOVANDO</h2>
-                <p>Descubre nuestras últimas creaciones, hechas con los ingredientes más frescos y el sabor que ya conoces.</p>
+                <h2>En Tortas Jerry siempre estamos innovando</h2>
+                <p class="section-description mx-auto mb-5 text-white">Descubre nuestras últimas creaciones, hechas con los ingredientes más frescos y el sabor que ya conoces.</p>
 
-            <div class="slider-container">
-                <button class="slider-arrow prev">&#10094;</button>
-                <div class="slider">
-                    <div class="slide active">
-                        <img src="img/tortasfit.jpg" alt="Nuevas Tortas JerryFit">
+                <div id="carruselNovedades" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner mx-auto carousel-max-width">
+                        <div class="carousel-item active">
+                            <img src="img/tortasfit.jpg" class="d-block w-100 rounded" alt="Nuevas Tortas JerryFit">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/Menu-Combo-a9d3dbf8.jpg" class="d-block w-100 rounded" alt="Otro producto nuevo">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/Menu-Tortas-2aab11c0.jpg" class="d-block w-100 rounded" alt="Tercer producto">
+                        </div>
                     </div>
-                <div class="slide">
-                    <img src="img/Menu-Combo-a9d3dbf8.jpg" alt="Otro producto nuevo">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carruselNovedades" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carruselNovedades" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
                 </div>
-                <div class="slide">
-                    <img src="img/Menu-Tortas-2aab11c0.jpg" alt="Tercer producto">
-                </div>
-                </div>
-                <button class="slider-arrow next">&#10095;</button>
-            </div>
             </div>
         </section>
 
-<section id="lo-mejor" class="grid-section">
-    <div class="title-wrapper">
-        <h2 class="section-title-bg"><span>LO MEJOR DE LO MEJOR</span></h2>
-    </div>
-
-    <div class="container">    
-        <p class="section-description">En Tortas Jerry podrás encontrar diferente variedad de:</p>
-        <div class="grid-container">
-            <div class="grid-item animate-on-scroll">
-                <a href="menu.html#tortas-menu">
-                    <img src="img/iniciotortas.webp" alt="Tortas">
-                    <div class="item-overlay"> <h3>TORTAS</h3>
-                    </div>
-                </a>
+        <section id="lo-mejor" class="pb-5">
+            <div class="title-wrapper text-center">
+                <h2>Lo Mejor de lo Mejor</h2>
             </div>
-            <div class="grid-item animate-on-scroll">
-                <a href="menu.html#tacos-menu">
-                    <img src="img/iniciotacos.webp" alt="Tacos">
-                    <div class="item-overlay"> <h3>TACOS</h3>
+
+            <div class="container text-center">    
+                <p class="section-description text-dark fs-5">En Tortas Jerry podrás encontrar diferente variedad de:</p>
+                
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 animate-on-scroll">
+                        <a href="menu.html#tortas-menu" class="grid-item">
+                            <img src="img/iniciotortas.webp" class="img-fluid" alt="Tortas">
+                            <div class="item-overlay"> 
+                                <h3>TORTAS</h3> 
+                            </div>
+                        </a>
                     </div>
-                </a>
-            </div>
-            <div class="grid-item animate-on-scroll">
-                <a href="menu.html#tortas-menu">
-                    <img src="img/iniciohamburguesas.webp" alt="Hamburguesas">
-                    <div class="item-overlay"> <h3>HAMBURGUESAS</h3>
+                    <div class="col-12 col-md-6 animate-on-scroll">
+                        <a href="menu.html#tacos-menu" class="grid-item">
+                            <img src="img/iniciotacos.webp" class="img-fluid" alt="Tacos">
+                            <div class="item-overlay"> 
+                                <h3>TACOS</h3> 
+                            </div>
+                        </a>
                     </div>
-                </a>
-            </div>
-            <div class="grid-item animate-on-scroll">
-                <a href="menu.html#complementos-menu">
-                    <img src="img/iniciocomplementos.webp" alt="Complementos">
-                    <div class="item-overlay"> <h3>COMPLEMENTOS</h3>
+                    <div class="col-12 col-md-6 animate-on-scroll">
+                        <a href="menu.html#tortas-menu" class="grid-item">
+                            <img src="img/iniciohamburguesas.webp" class="img-fluid" alt="Hamburguesas">
+                            <div class="item-overlay"> 
+                                <h3>HAMBURGUESAS</h3> 
+                            </div>
+                        </a>
                     </div>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-        <section id="servicios">
-    <div class="title-wrapper">
-        <h2>NUESTROS SERVICIOS</h2>
-    </div>
-
-    <div class="container">
-        <p class="section-description">
-            Prueba nuestros diferentes servicios que ofrecemos, en todos aseguramos una buena atención.
-        </p>
-
-        <div class="services-container">
-
-            <div class="service-item">
-                <div class="service-icon-wrapper">
-                    <img src="img/iconos/Recurso2Iconoptelefono.png" alt="Pedido por Teléfono">
+                    <div class="col-12 col-md-6 animate-on-scroll">
+                        <a href="menu.html#complementos-menu" class="grid-item">
+                            <img src="img/iniciocomplementos.webp" class="img-fluid" alt="Complementos">
+                            <div class="item-overlay"> 
+                                <h3>COMPLEMENTOS</h3> 
+                            </div>
+                        </a>
+                    </div>
                 </div>
-                <h3>PEDIDO POR TELÉFONO</h3>
-                <p>Haz tu pedido fácil y rápido llamándonos, puedes pasar a recoger tu pedido o perdirlo a domicilio.</p>
+            </div>
+        </section>
+
+        <section id="servicios" class="pb-5 bg-light">
+            <div class="title-wrapper text-center mb-4">
+                <h2>Nuestros Servicios</h2>
             </div>
 
-            <div class="service-item">
-                <div class="service-icon-wrapper">
-                    <img src="img/iconos/Recurso3Iconocomedor.png" alt="Servicio de Comedor">
+            <div class="container text-center">
+                <p class="section-description mb-5 text-dark">Prueba nuestros diferentes servicios que ofrecemos, en todos aseguramos una buena atención.</p>
+
+                <div class="row g-4 justify-content-center">
+                    <div class="col-12 col-md-4 service-item">
+                        <div class="service-icon-wrapper mx-auto mb-3">
+                            <img src="img/iconos/Recurso2Iconoptelefono.png" alt="Pedido por Teléfono">
+                        </div>
+                        <h3>PEDIDO POR TELÉFONO</h3>
+                        <p>Haz tu pedido fácil y rápido llamándonos, puedes pasar a recoger tu pedido o pedirlo a domicilio.</p>
+                    </div>
+                    <div class="col-12 col-md-4 service-item">
+                        <div class="service-icon-wrapper mx-auto mb-3">
+                            <img src="img/iconos/Recurso3Iconocomedor.png" alt="Servicio de Comedor">
+                        </div>
+                        <h3>SERVICIO DE COMEDOR</h3>
+                        <p>Vive la experiencia completa en nuestro espacio, con ambiente cómodo y atención directa.</p>
+                    </div>
+                    <div class="col-12 col-md-4 service-item">
+                        <div class="service-icon-wrapper mx-auto mb-3">
+                            <img src="img/iconos/Recurso4Iconollevar.png" alt="Para LLevar">
+                        </div>
+                        <h3>SERVICIO PARA LLEVAR</h3>
+                        <p>Pide en el restaurante y recoge tu comida para disfrutarla donde prefieras.</p>
+                    </div>
                 </div>
-                <h3>SERVICIO DE COMEDOR</h3>
-                <p>Vive la experiencia completa en nuestro espacio, con ambiente cómodo y atención directa.</p>
-            </div>
 
-            <div class="service-item">
-                <div class="service-icon-wrapper">
-                    <img src="img/iconos/Recurso4Iconollevar.png" alt="Para LLevar">
+                <h3 class="delivery-title">HAZ TU PEDIDO TAMBIÉN EN...</h3>
+                <div class="delivery-apps d-flex justify-content-center gap-4">
+                    <a href="https://www.ubereats.com/mx/store/tortas-jerry-sucursal-petrolera/0-_RKtBLXLmxd_56i4LkDg?diningMode=DELIVERY&ps=1&surfaceName=" target="_blank" class="app-link">
+                        <img src="img/iconos/uberetas.png" alt="Uber Eats">
+                    </a>
+                    <a href="https://www.rappi.com.mx/" target="_blank" class="app-link">
+                        <img src="img/iconos/Logorappimodificacion.jpg" alt="Rappi">
+                    </a>
                 </div>
-                <h3> SERVICIO PARA LLEVAR</h3>
-                <p>Pide en el restaurante y recoge tu comida para disfrutarla donde prefieras.</p>
             </div>
-        </div>
-
-        <h3 class="delivery-title">HAZ TU PEDIDO TAMBIÉN EN...</h3>
-
-        <div class="delivery-apps">
-            <a href="https://www.ubereats.com/mx/store/tortas-jerry-sucursal-petrolera/0-_RKtBLXLmxd_56i4LkDg?srsltid=AfmBOoqNTYQS6cqaiAxEth-B71lNn0RIHG-yItq38P153CdMXV4hjud1" target="_blank">
-                <img src="img/iconos/uberetas.png" alt="Uber Eats">
-            </a>
-            <a href="https://www.rappi.com.mx/restaurantes/1923286517-tortas-jerry" target="_blank">
-                <img src="img/iconos/Logorappimodificacion.jpg" alt="Rappi">
-            </a>
-        </div>
-    </div>
-</section>
-
+        </section>
     </main>
 
-    <footer>
-    <div class="container">
-        <div class="footer-content">
-
-            <div class="footer-column footer-brand">
-                <img src="img/logotortasjerry.png" alt="Logo Tortas Jerry" class="footer-logo">
-                <p class="copyright">&copy; 2025 Tortas Jerry</p>
-            </div>
-
-            <div class="footer-column">
-                <h4>Navegación</h4>
-                <ul class="footer-links">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="menu.html">Menú</a></li>
-                    <li><a href="sucursales.html">Sucursales</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-column">
-                <h4>Sugerencias</h4>
-                <ul class="footer-links-with-icons">
-                    <li>
-                        <a href="mailto:info@tortasjerry.com">
-                            <img src="img/iconosfooter/Recurso8emailfondoblanco.png" alt="Email">
-                            <span>Correo Electrónico</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://wa.me/+528332178711">
-                            <img src="img/iconosfooter/Recurso7whatsfondoblanco.png" alt="Mensaje de Texto">
-                            <span>Mensaje de Texto</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="footer-column">
-                <h4>Redes Sociales</h4>
-                <ul class="footer-links-with-icons">
-                    <li>
-                        <a href="https://www.facebook.com/tortasjerryoficial/" target="_blank">
-                            <img src="img/iconosfooter/Recurso5facefondoblanco.png" alt="Facebook">
-                            <span>Facebook</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/tortas_jerry/?hl=es-la" target="_blank">
-                            <img src="img/iconosfooter/Recurso6instafondoblanco.png" alt="Instagram">
-                            <span>Instagram</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="footer-column">
-                <h4>Horarios de Atención</h4>
-                <div class="footer-info-item">
-                    <img src="img/iconosfooter/Recurso 20horariofondoblanco.png" alt="Horario">
-                    <span>8:00am - 9:00pm<br>De Lunes a Domingo</span>
+    <footer class="pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4 text-center text-md-start">
+                
+                <div class="col-12 col-md-3 footer-brand text-center text-md-start">
+                    <img src="img/logotortasjerry.png" alt="Logo Tortas Jerry" class="footer-logo mb-3">
+                    <p class="copyright">&copy; 2025 Tortas Jerry</p>
                 </div>
+
+                <div class="col-12 col-md-2">
+                    <h4>Navegación</h4>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="menu.html">Menú</a></li>
+                        <li><a href="sucursales.html">Sucursales</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-3">
+                    <h4>Sugerencias</h4>
+                    <ul class="list-unstyled footer-links-with-icons">
+                        <li class="mb-2">
+                            <a href="mailto:info@tortasjerry.com" class="d-flex align-items-center justify-content-center justify-content-md-start gap-2">
+                                <img src="img/iconosfooter/Recurso8emailfondoblanco.png" alt="Email" class="footer-icon"> <span>Correo Electrónico</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/+528332178711" class="d-flex align-items-center justify-content-center justify-content-md-start gap-2">
+                                <img src="img/iconosfooter/Recurso7whatsfondoblanco.png" alt="WhatsApp" class="footer-icon"> <span>Mensaje de Texto</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <h4>Redes Sociales</h4>
+                    <ul class="list-unstyled footer-links-with-icons d-flex justify-content-center justify-content-md-start gap-3 mb-3">
+                        <li>
+                            <a href="https://www.facebook.com/tortasjerryoficial/" target="_blank"><img src="img/iconosfooter/Recurso5facefondoblanco.png" alt="Facebook" class="footer-icon social-icon"></a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/tortas_jerry/?hl=es" target="_blank"><img src="img/iconosfooter/Recurso6instafondoblanco.png" alt="Instagram" class="footer-icon social-icon"></a>
+                        </li>
+                    </ul>
+                    
+                    <h4 class="mt-4">Horarios</h4>
+                    <div class="footer-info-item d-flex align-items-center justify-content-center justify-content-md-start gap-2">
+                        <img src="img/iconosfooter/Recurso 20horariofondoblanco.png" alt="Horario" class="footer-icon">
+                        <span>8:00am - 9:00pm<br>De Lunes a Domingo</span>
+                    </div>
+                </div>
+
             </div>
-
         </div>
-    </div>
-</footer>
+    </footer>
 
-    <script src="script.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js//estilojs.js"></script>
 </body>
 </html>
